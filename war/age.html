@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta itemprop="name" content="The Great Singapore Rat Race">
+<meta itemprop="description" content="Compare your pay!">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- BEGIN Facebook Open Graph tags -->
+<meta property="og:title" content="The Great Singapore Rat Race" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://sgratrace.appspot.com/" />
+<meta property="og:image" content="" />
+<meta property="og:site_name" content="The Great Singapore Rat Race" />
+<meta property="fb:app_id" content="" />
+<!-- END Facebook Open Graph tags -->
+
+<title>Occupation Wages by Age - The Great Singapore Rat Race</title>
+
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"
+	type="text/css">
+<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css"
+	type="text/css">
+<link rel="stylesheet" href="styles/rats.css" type="text/css">
+
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push([ '_setAccount', 'UA-37611059-1' ]);
+	_gaq.push([ '_trackPageview' ]);
+
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+				: 'http://www')
+				+ '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+</head>
+
+<body class="page-age">
+	<!-- Javascript SDK for Facebook Like Button HTML5 Plugin -->
+	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id))
+				return;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+	<!-- /Javascript SDK for Facebook Like Button HTML5 Plugin -->
+
+
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="container">
+
+
+				<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+				<a class="btn btn-navbar" data-toggle="collapse"
+					data-target=".nav-collapse"> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span>
+				
+				
+				</a> <a class="brand" href="index.html">The Great Singapore Rat Race</a>
+
+
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class="dropdown"><a class="dropdown-toggle"
+							data-toggle="dropdown" href="#">Macro <b class="caret"></b>
+						</a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+								<li class="nav-header">Income Trends</li>
+								<li><a href="macro.html">Citizens</a></li>
+								<li><a href="household.html">Households</a></li>
+							</ul></li>
+
+
+						<li class="dropdown active"><a class="dropdown-toggle"
+							data-toggle="dropdown" href="#">Occupation <b class="caret"></b>
+						</a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+
+								<li class="nav-header">Occupation Wages</li>
+								<li class="active"><a href="age.html">Age</a></li>
+								<li><a href="industry.html">Industry</a></li>
+							</ul></li>
+
+
+						<li class="dropdown"><a class="dropdown-toggle"
+							data-toggle="dropdown" href="#">Graduates <b class="caret"></b>
+						</a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+								<li><a href="grad-overview.html">Overview</a></li>
+								<li class="nav-header">Starting Pay</li>
+								<li><a href="index.html">Universities</a></li>
+								<li><a href="diploma.html">Polytechnics</a></li>
+							</ul></li>
+
+
+						<li><a href="about.html">About</a></li>
+					</ul>
+					<div id="gplus-button" class="pull-right">
+						<!-- g-plusone button does not display properly if mixed with other css classes -->
+						<div class="g-plusone" data-size="medium"
+							data-href="http://sgratrace.appspot.com/"></div>
+					</div>
+					<div id="tweet-button" class="pull-right">
+						<a href="https://twitter.com/share" class="twitter-share-button"
+							data-url="http://sgratrace.appspot.com/"
+							data-text="The Great Singapore Rat Race - don't be the last rat!">Tweet</a>
+					</div>
+					<div id="fb-like-button" class="pull-right">
+						<div class="fb-like" data-href="http://sgratrace.appspot.com/"
+							data-send="false" data-layout="button_count"
+							data-show-faces="false"></div>
+					</div>
+				</div>
+				<!-- /.nav-collapse -->
+
+			</div>
+		</div>
+	</div>
+	<!-- /.navbar -->
+
+
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="offset1 span10">
+				<h1 class="inline-top">
+					Occupation Wages <small>by Age</small>
+				</h1>
+
+				<div id="infobar" class="pull-right hidden-phone">
+					<a id="chartguide" href="#" class="btn btn-info" rel="popover"><i
+						class="icon-picture icon-white"></i> Chart Guide</a> <a
+						id="glossary"
+						href="#" class="btn btn-info" rel="popover"><i
+						class="icon-info-sign icon-white"></i> Glossary</a> <a id="chartdata"
+						href="https://docs.google.com/spreadsheet/ccc?key=0ArgBv2Jut0VxdHprczZyVzh6VWctLVVTSWNXcWRoaHc&usp=sharing#gid=3"
+						class="btn btn-primary" target="_blank"><i
+						class="icon-th-list icon-white"></i> Chart Data</a>
+
+				</div>
+				
+
+				<p class="muted">What are the pay prospects of your occupation? At what age
+					will you reach your income peak? Planning a
+					mid-career change? Find out more in the charts below!</p>
+
+
+				<div id="dashboard">
+					<div class="well">
+						
+						<div class="hidden-phone">
+							<div id="control1" class="gviz control-occupation"></div>
+							<button id="control-clearall" class="btn btn-small btn-primary"
+								type="button">Clear Selection</button>
+						</div>
+						
+						<div id="control2" class="inline-top"></div>
+						<div id="control3" class="inline-top"></div>
+						
+						<div class="clearfix"></div>
+						
+						<div id="control4" class="inline-top"></div>
+						<div id="control5" class="inline-top"></div>
+					</div>
+
+					<div id="chart1" class="gviz chart hidden-phone"></div>
+					
+					<p class="muted">
+						<small>Source: Manpower Research and Statistical Department, Ministry of Manpower <a
+							href="http://www.mom.gov.sg/statistics-publications/national-labour-market-information/publications/Pages/report-wages.aspx"
+							target="_blank">Report on Wages 2011</a>,
+							Table 1.4. Figures in Singapore Dollars.
+						</small>
+					</p>
+
+					<div id="chart2"></div>
+
+				</div>
+				
+				<hr class="footer-line" />
+
+			</div>
+
+		</div>
+
+	</div>
+	<!-- /.container-fluid -->
+	
+	
+
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="js/rats.js"></script>
+	
+	<script type="text/javascript" src="js/spin.min.js"></script>
+	
+	<script type="text/javascript">
+		// Show a spinning load indicator
+		// while the page is loading
+		var spinner;
+		
+		$(document).ready(function(){
+			// Once the DOM is loaded, start spinning
+			spinner = Rats.UI.LoadAnimation.start();
+			
+			pageUI();
+			
+		});
+		
+		$(window).load(function(){
+			// Once the page is fully loaded, stop spinning
+			Rats.UI.LoadAnimation.stop(spinner);
+		});
+		
+		function pageUI() {
+			if (Rats.getUserDevice() <= Rats.Constants.PHONE) {
+				$(".navbar a.brand").text(Rats.Constants.APP_SHORT_NAME);
+			}
+			
+			// Tooltip for occupation filter
+			$("#control1").tooltip({
+				title : "Type in the occupations you want to compare",
+				placement : "top",
+				html : false,
+				trigger : "hover",
+				selector : ".goog-combobox"
+			});
+			
+			$("#control-clearall").tooltip({
+				title : "Clear all selected occupations",
+				placement : "right",
+				html : false,
+				trigger : "hover"
+			});	
+			
+			// Tooltip for wage filters
+			
+			$("#control2").tooltip({
+				title : "Set a wage target in your 20s",
+				placement : "top",
+				html : false,
+				trigger : "hover"
+			});
+			
+			$("#control3").tooltip({
+				title : "Set a wage target in your 30s",
+				placement : "top",
+				html : false,
+				trigger : "hover"
+			});	
+			
+			$("#control4").tooltip({
+				title : "Set a wage target in your 40s",
+				placement : "top",
+				html : false,
+				trigger : "hover"
+			});	
+			
+			$("#control5").tooltip({
+				title : "Set a wage target in your 50s",
+				placement : "top",
+				html : false,
+				trigger : "hover"
+			});	
+			
+			// Tooltip for table chart
+			
+			$("#chart2").tooltip({
+				"title" : "Click on the column headers to sort the data",
+				"placement" : "top",
+				"html" : false,
+				"trigger" : "hover"
+			})
+			
+			// Tooltip for chart data link
+			
+			$("#infobar #chartdata").tooltip({
+					title : "Grab the chart data!",
+					placement : "bottom",
+					html : false,
+					trigger : "hover"
+			});
+
+			// Popover for glossary
+			
+			$("#infobar #glossary").popover({
+				title : "What do the terms mean?",
+				placement : "bottom",
+				html : true,
+				trigger : "hover",
+				content : "<ol><li><strong>Monthly Gross Wage</strong> refers to the sum of the basic wage, overtime payments, " + 
+				"commissions, allowances, and other regular cash payments before deduction of employee CPF contributions " +
+				"and personal income tax. However, it excludes employer CPF contributions, bonuses, stock options, " + 
+				"other lump sum payments and payments-in-kind.</li><li><strong>Median (50th percentile)</strong> refers " +
+				"to the wage level at the middle of the income distribution which divides the bottom half of wage earners " +
+				"from the upper half.</li></ol>"
+			});
+			
+			// Popover for chart guide
+
+			$("#infobar #chartguide").popover({
+				title : "What do the charts mean?",
+				placement : "bottom",
+				html : true,
+				trigger : "hover",
+				content : "<ol><li>Data is suppressed if the actual number of observations covered " +
+					"is too small to maintain wage confidentiality. Hence there are 'missing' age groups for certain " + 
+					"occupations in the chart.</li><li>" +
+					"The pace of wage increase with age was more pronounced among managers and professionals. " + 
+					"However, the wages of lower skilled workers were largely flat for younger workers before " +
+					"declining for those in their mid forties onwards. " + 
+					"Advancing age typically works against workers in physically demanding manual occupations.</li></ol>"
+					
+			});
+			
+		};
+	</script>
+
+	<!-- Required for loading Google Visualization API -->
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+	<script type="text/javascript">
+		// Loads the Google Visualization libraries
+		google.load('visualization', '1', {
+			'packages' : [ 'controls' ]
+		});
+		google
+				.setOnLoadCallback(Rats.Viz.Occupation.Age.query);
+	</script>
+
+	<!-- BEGIN js for tweet button -->
+	<script>
+		!function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (!d.getElementById(id)) {
+				js = d.createElement(s);
+				js.id = id;
+				js.src = "//platform.twitter.com/widgets.js";
+				fjs.parentNode.insertBefore(js, fjs);
+			}
+		}(document, "script", "twitter-wjs");
+	</script>
+	<!-- END js for tweet button -->
+	<!-- BEGIN js for google +1 button -->
+	<script type="text/javascript">
+		(function() {
+			var po = document.createElement('script');
+			po.type = 'text/javascript';
+			po.async = true;
+			po.src = 'https://apis.google.com/js/plusone.js';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(po, s);
+		})();
+	</script>
+	<!-- END js for google +1 button -->
+</body>
+</html>

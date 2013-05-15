@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta itemprop="name" content="The Great Singapore Rat Race">
+<meta itemprop="description" content="Compare your pay!">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- BEGIN Facebook Open Graph tags -->
+<meta property="og:title" content="The Great Singapore Rat Race" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://sgratrace.appspot.com/" />
+<meta property="og:image" content="" />
+<meta property="og:site_name" content="The Great Singapore Rat Race" />
+<meta property="fb:app_id" content="" />
+<!-- END Facebook Open Graph tags -->
+
+<title>The Great Singapore Rat Race</title>
+
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"
+	type="text/css">
+<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css"
+	type="text/css">
+<link rel="stylesheet" href="styles/rats.css" type="text/css">
+
+<script type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push([ '_setAccount', 'UA-37611059-1' ]);
+	_gaq.push([ '_trackPageview' ]);
+
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
+				: 'http://www')
+				+ '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+</head>
+
+<body class="page-household">
+	<!-- Javascript SDK for Facebook Like Button HTML5 Plugin -->
+	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id))
+				return;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+	<!-- /Javascript SDK for Facebook Like Button HTML5 Plugin -->
+
+
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="container">
+
+
+				<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+				<a class="btn btn-navbar" data-toggle="collapse"
+					data-target=".nav-collapse"> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span>
+				</a> 
+				
+				
+				<a class="brand" href="index.html">The Great Singapore Rat Race</a>
+
+
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class="dropdown active"><a class="dropdown-toggle"
+							data-toggle="dropdown" href="#">Macro <b class="caret"></b>
+						</a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+								<li class="nav-header">Income Trends</li>
+								<li><a href="macro.html">Citizens</a></li>
+								<li class="active"><a href="household.html">Households</a></li>
+							</ul></li>
+
+
+						<li class="dropdown"><a class="dropdown-toggle"
+							data-toggle="dropdown" href="#">Occupation <b class="caret"></b>
+						</a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+
+								<li class="nav-header">Occupation Wages</li>
+								<li><a href="age.html">Age</a></li>
+								<li><a href="industry.html">Industry</a></li>
+							</ul></li>
+
+
+						<li class="dropdown"><a class="dropdown-toggle"
+							data-toggle="dropdown" href="#">Graduates <b class="caret"></b>
+						</a>
+							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+								<li><a href="grad-overview.html">Overview</a></li>
+								<li class="nav-header">Starting Pay</li>
+								<li><a href="index.html">Universities</a></li>
+								<li><a href="diploma.html">Polytechnics</a></li>
+							</ul></li>
+
+
+						<li><a href="about.html">About</a></li>
+					</ul>
+					<div id="gplus-button" class="pull-right">
+						<!-- g-plusone button does not display properly if mixed with other css classes -->
+						<div class="g-plusone" data-size="medium"
+							data-href="http://sgratrace.appspot.com/"></div>
+					</div>
+					<div id="tweet-button" class="pull-right">
+						<a href="https://twitter.com/share" class="twitter-share-button"
+							data-url="http://sgratrace.appspot.com/"
+							data-text="The Great Singapore Rat Race - don't be the last rat!">Tweet</a>
+					</div>
+					<div id="fb-like-button" class="pull-right">
+						<div class="fb-like" data-href="http://sgratrace.appspot.com/"
+							data-send="false" data-layout="button_count"
+							data-show-faces="false"></div>
+					</div>
+				</div>
+				<!-- /.nav-collapse -->
+
+			</div>
+		</div>
+	</div>
+	<!-- /.navbar -->
+
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="offset1 span10">
+				<h1 class="inline-top">
+					Income Trends <small>Resident Households</small>
+				</h1>
+
+				<div id="infobar" class="pull-right hidden-phone">
+					<a id="glossary" href="#" class="btn btn-info" rel="popover"><i
+						class="icon-info-sign icon-white"></i> Glossary</a> 
+					<a id="chartdata"
+						href="https://docs.google.com/spreadsheet/ccc?key=0ArgBv2Jut0VxdDVaYzczVzBpbGdOZWxORFlORzdmN3c&usp=sharing#gid=2"
+						class="btn btn-primary" target="_blank"><i
+						class="icon-th-list icon-white"></i> Chart Data</a>
+
+				</div>
+				
+				<p class="muted">Compare income groups - for example, check out
+						the gap between the "81st - 90th" and the "91st - 100th"
+						percentile!</p>
+
+				<div id="dashboard">
+					
+					<div id="control1"></div>
+					
+					
+					<div id="chart1" class="gviz chart"></div>
+					<p class="muted">
+						<small>Source: <a
+							href="http://www.singstat.gov.sg/pubn/catalogue.html#hhldincome"
+							target="_blank">Department of Statistics, Key Household IncomeTrends 2012.</a>
+							Based on ranking of all resident employed households by their
+							monthly household income from work excluding employer CPF
+							contributions. Figures in Singapore Dollars.
+						</small>
+					</p>
+
+
+					<div id="chart2" class="gviz chart"></div>
+					<p class="muted">
+						<small>Source: <a
+							href="http://www.singstat.gov.sg/pubn/catalogue.html#hhldincome"
+							target="_blank">Department of Statistics, Key Household IncomeTrends 2012.</a>
+							Based on ranking of all resident employed
+							households by their monthly household income from work excluding
+							employer CPF contributions per household member.
+							Figures in Singapore Dollars.
+						</small>
+					</p>
+					
+					
+				</div>
+				
+				<hr />
+				
+				<h2>Inflation</h2>
+				
+				<div id="dashboard2">
+					<p class="muted">
+						Compare how income groups fare against inflation, as represented
+						by the <span class="label label-important">red line</span>. Zoom
+						in to a particular decile or year using the controls below:
+					</p>
+					<select id="control-decile" class="inline-top">
+						<option value="0">All Deciles</option>
+						<option value="2">*1st - 10th Percentile</option>
+						<option value="3">11th - 20th Percentile</option>
+						<option value="4">21st - 30th Percentile</option>
+						<option value="5">31st - 40th Percentile</option>
+						<option value="6">41st - 50th Percentile</option>
+						<option value="7">51st - 60th Percentile</option>
+						<option value="8">61st - 70th Percentile</option>
+						<option value="9">71st - 80th Percentile</option>
+						<option value="10">81st - 90th Percentile</option>
+						<option value="11">91st - 100th Percentile</option>
+					</select>
+					<div id="control2" class="inline-top"></div>
+					<div id="chart3" class="gviz chart"></div>
+					<p class="muted">
+						<small>Source: <a
+							href="http://www.singstat.gov.sg/pubn/catalogue.html#hhldincome"
+							target="_blank">Department of Statistics, Key Household IncomeTrends 2012.</a>
+							Based on ranking of all resident employed
+							households by their monthly household income from work excluding
+							employer CPF contributions. Figures in Singapore Dollars.</small>
+					</p>
+
+					<div id="chart4" class="gviz chart"></div>
+					<p class="muted">
+						<small>Source: <a
+							href="http://www.singstat.gov.sg/pubn/catalogue.html#hhldincome"
+							target="_blank">Department of Statistics, Key Household IncomeTrends 2012.</a>
+							Based on ranking of all resident employed
+							households by their monthly household income from work excluding
+							employer CPF contributions per household member. Figures in Singapore Dollars.</small>
+					</p>
+				</div>
+
+				<section id="notes">
+					<p>Notes</p>
+
+					<ol class="essay">
+						<li>Resident households refer to households headed by
+							Singapore citizens or permanent residents. For statistical
+							purposes, a household refers to a group of persons living in the
+							same dwelling unit and sharing common living arrangements. A
+							household may comprise related or unrelated members.</li>
+						<li>There were 1.15 million resident households in 2011 and
+							the average household size remained unchanged at 3.5 persons
+							since 2006.</li>
+						<li>The proportion of resident households with at least one
+							working person (i.e <em>resident employed households</em>)
+							increased from 90 per cent in 2010 to 91 per cent in 2011.
+						</li>
+						<li>Household income from work refers to the sum of income
+							received by all working members of the household from employment
+							and business but excludes the income of maids.</li>
+						<li>Household income from work per household member refers to
+							the household income from work divided by the total number of
+							members in the household. For example, if only one person in a
+							household of four is working, his income is divided by four to
+							derive the average income per household member.</li>
+					</ol>
+				</section>
+
+
+				<hr class="footer-line" />
+
+			</div>
+		</div>
+	</div>
+	<!-- /.container-fluid -->
+	
+	
+
+	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="js/rats.js"></script>
+	
+	<script type="text/javascript" src="js/spin.min.js"></script>
+	
+	<script type="text/javascript">
+		// Show a spinning load indicator
+		// while the page is loading
+		var spinner;
+		
+		$(document).ready(function(){
+			// Once the DOM is loaded, start spinning
+			spinner = Rats.UI.LoadAnimation.start();
+			
+			pageUI();
+			
+		});
+		
+		$(window).load(function(){
+			// Once the page is fully loaded, stop spinning
+			Rats.UI.LoadAnimation.stop(spinner);
+		});
+		
+		function pageUI() {
+			if (Rats.getUserDevice() <= Rats.Constants.PHONE) {
+				$(".navbar a.brand").text(Rats.Constants.APP_SHORT_NAME);
+			}
+			
+			// Tooltip for chart data link
+			
+			$("#infobar #chartdata").tooltip({
+				title : "Get the chart data!",
+				placement : "bottom",
+				html : "false",
+				trigger : "hover"
+			});
+
+			
+			$("#infobar #glossary").popover({
+				title : "Decile (Decile Group)",
+				placement : "bottom",
+				html : true,
+				trigger : "hover",
+				content : 'A decile group is one tenth of all households arranged by their incomes from minimum to maximum. The first decile group is the first one tenth (the 10% of all household with lowest incomes). The last decile is the one tenth of the households with the highest incomes.'
+			});
+		};
+	</script>
+
+	<!-- Required for loading Google Visualization API -->
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+	<script type="text/javascript">
+		
+		// Loads the Google Visualization libraries
+		google.load('visualization', '1', {
+			'packages' : [ 'controls' ]
+		});
+		google.setOnLoadCallback(Rats.Viz.Macro.Household.query);
+	</script>
+
+	<!-- BEGIN js for tweet button -->
+	<script>
+		!function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (!d.getElementById(id)) {
+				js = d.createElement(s);
+				js.id = id;
+				js.src = "//platform.twitter.com/widgets.js";
+				fjs.parentNode.insertBefore(js, fjs);
+			}
+		}(document, "script", "twitter-wjs");
+	</script>
+	<!-- END js for tweet button -->
+	<!-- BEGIN js for google +1 button -->
+	<script type="text/javascript">
+		(function() {
+			var po = document.createElement('script');
+			po.type = 'text/javascript';
+			po.async = true;
+			po.src = 'https://apis.google.com/js/plusone.js';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(po, s);
+		})();
+	</script>
+	<!-- END js for google +1 button -->
+</body>
+</html>

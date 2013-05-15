@@ -1,0 +1,238 @@
+/* Default Resets
+********************************************************/
+h1 {
+	margin: .5em 0 .5em 0;
+}
+
+/* Bootstrap Resets
+********************************************************/
+
+.navbar a.brand {
+	/* Max font size to prevent wrapping 
+	at viewport width 1000px */
+	font-size: 1.24em;
+}
+
+/* Social Buttons
+********************************************************/
+#fb-like-button {
+	margin-right: 1.2em;
+}
+
+#fb-like-button,#gplus-button,#tweet-button {
+	margin-top: .7em;
+}
+
+/* Custom Styles
+********************************************************/
+.inline-top {
+	display: inline-block;
+	vertical-align: top;
+}
+
+p.essay {
+	margin-bottom: 2em;
+	text-align: justify;
+}
+
+ol.essay,ul.essay {
+	margin-bottom: 3em;
+}
+
+ol.essay li,ul.essay li {
+	text-align: justify;
+}
+
+hr.footer-line {
+	margin-top: 5em;
+}
+
+/* Infobar beside the page title
+********************************************************/
+
+#infobar a {
+	margin: 0 .5em .5em 0;
+}
+
+/* Google Visualization UI
+********************************************************/
+
+.goog-menu-vertical {
+	max-height: 30em;
+	overflow-y: auto;
+	z-index: 15;
+}
+
+/*
+Set the entire width of the combobox
+including input field and dropdown button
+*/
+
+.gviz.control-occupation .goog-combobox {
+	width: 60em;
+}
+
+/*
+Set the width of the input field
+and the dropdown list below it
+*/
+
+.gviz.control-occupation .goog-combobox .goog-menu,
+.gviz.control-occupation .goog-combobox.goog-inline-block > input {
+	width: 58em;
+}
+
+/* Default chart size */
+
+.gviz.chart {
+	/* now gviz will automatically fill parent's width */
+	height: 30em;
+}
+
+/* IHL Graduate Overview - Page Styles
+********************************************************/
+
+.page-overview #dashboard #chart1 {
+	margin: 2em 0 0 0;
+}
+
+.page-overview #dashboard #chart1,
+.page-overview #dashboard #chart2 {
+	height: 20em;
+}
+
+/* Uni Grad Starting Pay - Page Styles
+********************************************************/
+
+.page-degree #dashboard #control2,
+.page-degree #dashboard #control3,
+.page-degree #dashboard #control4 {
+	margin: 1em 0 0 0;
+}
+
+/* Diploma Grad Starting Pay - Page Styles
+********************************************************/
+
+.page-diploma #dashboard #control2,
+.page-diploma #dashboard #control3,
+.page-diploma #dashboard #control4 {
+	margin: 1em 0 0 0;
+}
+
+.page-diploma #dashboard #chart1 {
+	/* make bubble chart taller */
+	height: 40em;
+}
+
+/* Macro Citizen Income - Page Styles
+********************************************************/
+
+.page-citizen #notes {
+	margin: 2em 0 0 0;
+}
+
+.page-citizen #chart1, 
+.page-citizen #chart2 {
+	margin: 1em 0 0 0;
+	/* Make simple column charts shorter */
+	height: 25em;
+}
+
+/* Macro Household Income - Page Styles
+********************************************************/
+
+.page-household #notes {
+	margin: 2em 0 0 0;
+}
+
+.page-household #chart1, 
+.page-household #chart2,
+.page-household #chart3,
+.page-household #chart4 {
+	margin: 1em 0 0 0;
+}
+
+.page-household #control2 {
+	margin: 1em 0 1em 2em;
+}
+
+.page-household #control-decile {
+	margin: 1em 0 1em 0;	
+}
+
+/* Occupation Wages by Age - Page Styles
+********************************************************/
+.page-age #dashboard #control1 {
+	margin: 0 0 1em 0;
+}
+
+.page-age #dashboard #control2, 
+.page-age #dashboard #control4 {
+	margin: 1em 0 0 0;
+}
+
+.page-age #dashboard #control3 {
+	margin: 1em 0 0 1.5em;
+} 
+
+.page-age #dashboard #control5 {
+	margin: 1em 0 0 1em;
+}
+
+/* Occupation Wages by Industry - Page Styles
+********************************************************/
+.page-industry #dashboard #control1 {
+	margin: 0 0 1em 0;
+}
+
+.page-industry #dashboard #control2, 
+.page-industry #dashboard #control4,
+.page-industry #dashboard #control3 {
+	margin: 1em 0 0 0;
+}
+
+/* About - Page Styles
+********************************************************/
+.page-about .hero-unit {
+	/*background: url(../img/graphic_feature_1024x500.jpg) no-repeat center center fixed;*/
+	background: url(../img/graphic_feature_1024x500.jpg) no-repeat center;
+	background-size: cover;
+	height: 15em;
+	
+}
+
+
+/* Tablet
+********************************************************/
+
+@media ( max-width : 979px) {
+	.goog-menu-vertical {
+		max-height: 15em;
+	}
+
+	.gviz.control-occupation .goog-combobox {
+		width: 45em;
+	}
+
+	.gviz.control-occupation .goog-combobox .goog-menu,
+	.gviz.control-occupation .goog-combobox.goog-inline-block>input {
+		width: 43em;
+	}
+	
+}
+
+/* Regular Desktops
+********************************************************/
+/*
+@media (min-width: 980px) and (max-width: 1499px) {
+	
+}
+*/
+
+/* Very Large Desktops
+********************************************************/
+/*
+@media (min-width: 1500px) {
+	
+}
+*/
