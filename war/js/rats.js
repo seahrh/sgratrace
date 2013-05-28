@@ -1122,8 +1122,8 @@ Rats.Viz.GraduateEmploymentSurvey.Qualification.query = function() {
 			Rats.Viz.GraduateEmploymentSurvey.Qualification.dataSourceUrl);
 
 	query
-			.setQuery("select L, A, B, H, I, C, F, E, G where J = 'No' "
-					+ "order by I, H "
+			.setQuery("select L, A, H, B, I, C, F, E, G where J = 'No' "
+					+ "order by I, C "
 					+ "label C 'Employment Rate', F '25th Percentile', E 'Median', G '75th Percentile' "
 					+ "format F '$#,###', E '$#,###', G '$#,###', C '##.#%'");
 
@@ -1292,7 +1292,7 @@ Rats.Viz.GraduateEmploymentSurvey.Qualification.dashboard = function(response) {
 		// 25th percentile, Median, 75th percentile
 		
 		tableChart.setView({
-			'columns' : [ 1,3,6,7,8 ]
+			'columns' : [ 1,2,6,7,8 ]
 		});
 	} else {
 		tableChart.setView({
