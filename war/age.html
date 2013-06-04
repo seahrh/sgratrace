@@ -146,14 +146,14 @@
 				</h1>
 
 				<div id="infobar" class="pull-right hidden-phone">
-					<a id="chartguide" href="#" class="btn btn-info" rel="popover"><i
-						class="icon-picture icon-white"></i> Chart Guide</a> <a
+					<a id="chartguide" href="#" class="btn btn-danger" rel="popover"><i
+						class="icon-question-sign icon-white"></i> Zero Wages?</a> <a
 						id="glossary"
-						href="#" class="btn btn-info" rel="popover"><i
-						class="icon-info-sign icon-white"></i> Glossary</a> <a id="chartdata"
+						href="#" class="btn" rel="popover"><i
+						class="icon-info-sign"></i> Glossary</a> <a id="chartdata"
 						href="https://docs.google.com/spreadsheet/ccc?key=0ArgBv2Jut0VxdHprczZyVzh6VWctLVVTSWNXcWRoaHc&usp=sharing#gid=3"
-						class="btn btn-primary" target="_blank"><i
-						class="icon-th-list icon-white"></i> Chart Data</a>
+						class="btn" target="_blank"><i
+						class="icon-th-list"></i> Chart Data</a>
 
 				</div>
 				
@@ -174,9 +174,6 @@
 						
 						<div id="control2" class="inline-top"></div>
 						<div id="control3" class="inline-top"></div>
-						
-						<div class="clearfix"></div>
-						
 						<div id="control4" class="inline-top"></div>
 						<div id="control5" class="inline-top"></div>
 					</div>
@@ -317,18 +314,12 @@
 			// Popover for chart guide
 
 			$("#infobar #chartguide").popover({
-				title : "What do the charts mean?",
+				title : "Why are there missing/zero wages?",
 				placement : "bottom",
 				html : true,
 				trigger : "hover",
-				content : "<ol><li>Data is suppressed if the actual number of observations covered " +
-					"is too small to maintain wage confidentiality. Hence there are 'missing' age groups for certain " + 
-					"occupations in the chart.</li><li>" +
-					"The pace of wage increase with age was more pronounced among managers and professionals. " + 
-					"However, the wages of lower skilled workers were largely flat for younger workers before " +
-					"declining for those in their mid forties onwards. " + 
-					"Advancing age typically works against workers in physically demanding manual occupations.</li></ol>"
-					
+				content : "Data is suppressed for certain occupations or age groups if the number of observations is too small to be statistically representative. " + 
+					"For such cases, the chart shows zero ($0) wage and the table shows a blank cell."
 			});
 			
 		};
@@ -342,8 +333,7 @@
 		google.load('visualization', '1', {
 			'packages' : [ 'controls' ]
 		});
-		google
-				.setOnLoadCallback(Rats.Viz.Occupation.Age.query);
+		google.setOnLoadCallback(Rats.Viz.Occupation.Age.query);
 	</script>
 
 	<!-- BEGIN js for tweet button -->

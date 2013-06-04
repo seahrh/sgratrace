@@ -166,18 +166,14 @@ and the dropdown list below it
 	margin: 0 0 1em 0;
 }
 
-.page-age #dashboard #control2, 
-.page-age #dashboard #control4 {
-	margin: 1em 0 0 0;
-}
-
-.page-age #dashboard #control3 {
-	margin: 1em 0 0 1.5em;
-} 
-
+.page-age #dashboard #control2,
+.page-age #dashboard #control3, 
+.page-age #dashboard #control4,
 .page-age #dashboard #control5 {
-	margin: 1em 0 0 1em;
+	margin: 1em 1em 0 0;
 }
+
+
 
 /* Occupation Wages by Industry - Page Styles
 ********************************************************/

@@ -315,10 +315,11 @@ Rats.Viz.Occupation.Age.query = function() {
 	// Do not filter by Data Suppressed = No (Column E)
 	// because the data can be filtered by wage amount
 	
-	query.setQuery("select A, sum(D), sum(B) " +
-			"group by A pivot F " +
-			"label sum(D) '', A 'Occupation', sum(B) ' (Sample Size #persons)' " +
-			"format sum(D) '$#,###', sum(B) '#,###' ");
+	 query.setQuery("select A, sum(I), min(D), min(B) "
+					+ "group by A pivot F "
+					+ "label sum(I) '', min(D) ' (Median Monthly Wage $)', A 'Occupation', min(B) ' (Sample Size #persons)' "
+					+ "format sum(I) '$#,###', min(D) '$#,###', min(B) '#,###' ");
+	 
 
 	query.send(Rats.Viz.Occupation.Age.dashboard);
 };
@@ -326,6 +327,7 @@ Rats.Viz.Occupation.Age.query = function() {
 Rats.Viz.Occupation.Age.dashboard = function(response) {
 	var containerId = "dashboard";
 	var data = response.getDataTable();
+
 
 	// Create a dashboard.
 	var dashboard = new google.visualization.Dashboard(document
@@ -340,6 +342,7 @@ Rats.Viz.Occupation.Age.dashboard = function(response) {
 	
 	if (Rats.getUserDevice() > Rats.Constants.PHONE) {
 		
+		/*
 		selection.push("Carpenter",
 				"Excavating/ Trench digging machine operator",
 				"Lorry driver",
@@ -347,19 +350,19 @@ Rats.Viz.Occupation.Age.dashboard = function(response) {
 				"Supervisor/ General foreman (building and related trades)",
 				"Machinery mechanic",
 				"Plasterer",
-				"Welder");
+				"Welder");*/
 		
-		/*
+		
 		selection.push("Company director",
 				"Hotel operations/ Lodging services manager",
-				"General practitioner/ physician",
+				"Special education teacher",
 				"Pre-primary education teacher",
 				"Accountant",
 				"Registered nurse",
-				"Captain waiter/ Waiter supervisor",
+				"Crane/ Hoist operator",
 				"Bus driver",
 				"Cleaner in offices and other establishments",
-				"Financial/ Investment adviser");*/
+				"Financial/ Investment adviser");
 	}
 
 	// Filter by Occupation
@@ -489,16 +492,25 @@ Rats.Viz.Occupation.Age.dashboard = function(response) {
 
 	var tableChart = new google.visualization.ChartWrapper({
 		'chartType' : 'Table',
-		'containerId' : 'chart2'
+		'containerId' : 'chart2',
+		"options" : {
+			"allowHtml" : true
+		}
 	});
 	
+	
+	tableChart.setView({
+		'columns' : [ 0, 5, 6, 7, 8, 9, 10, 11, 12 ]
+	});
+	
+		
 	if (Rats.getUserDevice() <= Rats.Constants.TABLET) {
 		
 		// Columns: Industry, 20s wage, 30s wage
 		// 40s wage, 50s wage
 		
 		tableChart.setView({
-			'columns' : [ 0,1,2,3,4 ]
+			'columns' : [ 0, 5, 6, 7, 8 ]
 		});
 	}
 
