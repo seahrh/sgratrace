@@ -1428,18 +1428,19 @@ Rats.Viz.GraduateEmploymentSurvey.Diploma.dashboard = function(response) {
 			"titlePosition" : "out",
 			"axisTitlesPosition" : "out",
 			"legend" : {
-				"position" : "bottom",
-				"alignment" : "center",
-				"textStyle" : {"fontSize" : 12}
+				"position" : "top",
+				"alignment" : "left",
+				"textStyle" : {"fontSize" : 11}
 			},
 			"chartArea" : {
 				"width" : "100%",
 				"height" : "85%",
-				"top" : 30
+				"top" : 45
 			},
 			"hAxis" : {
 				"title" : "Full-Time Permanent Employment Rate",
 				"textPosition" : "in",
+				"textStyle" : {"fontSize" : 16},
 				// min and max gridlines to minimize cropping
 				"minValue" : .45,
 				"maxValue" : 1
