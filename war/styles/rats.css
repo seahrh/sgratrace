@@ -57,7 +57,7 @@ hr.footer-line {
 /* Google Visualization UI
 ********************************************************/
 
-.goog-menu-vertical {
+.charts-menu-vertical {
 	max-height: 30em;
 	overflow-y: auto;
 	z-index: 15;
