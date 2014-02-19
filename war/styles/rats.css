@@ -152,9 +152,12 @@ and the dropdown list below it
 	margin: 1em 0 0 0;
 }
 
-.page-household #control2 {
-	margin: 1em 0 1em 2em;
+
+
+.page-household #control1, .page-household #control2, .page-household #control3, .page-household #control4 {
+	margin: 1em 0 1em 0;
 }
+
 
 .page-household #control-decile {
 	margin: 1em 0 1em 0;	
