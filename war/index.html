@@ -148,16 +148,16 @@
 				</h1>
 
 				<div id="infobar" class="pull-right visible-desktop">
-					<a id="glossary" href="#" class="btn btn-info" rel="popover"><i
-						class="icon-info-sign icon-white"></i> Glossary</a> 
+					<a id="glossary" href="#" class="btn" rel="popover"><i
+						class="icon-info-sign"></i> Glossary</a> 
 					<a 	id="smu"
 						href="http://www.moe.gov.sg/education/post-secondary/files/ges-smu.pdf"
-						class="btn btn-info" rel="popover" target="_blank"><i
-						class="icon-comment icon-white"></i> SMU Top Earner</a> 
+						class="btn btn-danger" rel="popover" target="_blank"><i
+						class="icon-comment icon-white"></i> SMU Top Earner?</a> 
 					<a 	id="chartdata"
 						href="https://docs.google.com/spreadsheet/ccc?key=0ArgBv2Jut0VxdERtWEU4UE5BbFd2TnZzVW8yTlB5eFE&usp=sharing"
-						class="btn btn-primary" target="_blank"><i
-						class="icon-th-list icon-white"></i> Chart Data</a>
+						class="btn" target="_blank"><i
+						class="icon-th-list"></i> Chart Data</a>
 				</div>
 
 				<p class="muted">What is the starting pay range of your degree?
@@ -176,9 +176,9 @@
 
 					<p class="muted">
 						<small>Source: <a
-							href="https://docs.google.com/folder/d/0B7gBv2Jut0VxeFBvc0xSa2NlMWc/edit?usp=sharing"
+							href="//docs.google.com/folder/d/0B7gBv2Jut0VxeFBvc0xSa2NlMWc/edit?usp=sharing"
 							target="_blank">Ministry of Education, Graduate Employment
-								Survey</a> 2009 - 2012. Universities refer to the National
+								Survey</a> 2009 - 2013. Universities refer to the National
 							University of Singapore (NUS), Nanyang Technological University
 							(NTU) and Singapore Management University (SMU).
 						</small>
@@ -232,7 +232,7 @@
 				placement : "top",
 				html : false,
 				trigger : "hover",
-				selector : ".goog-inline-block"
+				selector : ".charts-inline-block"
 			});
 			
 			// Tooltip for year filter
@@ -242,7 +242,7 @@
 				placement : "right",
 				html : false,
 				trigger : "hover",
-				selector : ".goog-menu-button"
+				selector : ".charts-menu-button"
 			});
 			
 			// Tooltip for IHL filter
@@ -252,7 +252,7 @@
 				placement : "right",
 				html : false,
 				trigger : "hover",
-				selector : ".goog-menu-button"
+				selector : ".charts-menu-button"
 			});
 			
 			// Tooltip for faculty filter
@@ -262,7 +262,7 @@
 				placement : "right",
 				html : false,
 				trigger : "hover",
-				selector : ".goog-menu-button"
+				selector : ".charts-menu-button"
 			});
 			
 			// Popover for SMU info
@@ -275,7 +275,7 @@
 				"content" : "<p>SMU courses are displayed in two categories:</p>" 
 					+ "<ol>"
 					+ "<li>Overall results for <strong>all</strong> graduates within the course regardless of the award they attained;</li>"
-					+ "<li>Results for graduates awarded Cum Laude and above (GPA 3.4 and above; maximum 4.0) - <span class='text-warning'>NUS and NTU do not use this format to report the performance of their top graduates.</span></li>"
+					+ "<li>Results for graduates awarded Cum Laude and above (GPA 3.4 and above; maximum 4.0) - <span class='text-warning'><strong>NUS and NTU do not use this format to report the performance of their top graduates.</strong></span></li>"
 					+ "</ol>"
 			});
 
@@ -321,8 +321,7 @@
 		google.load('visualization', '1', {
 			'packages' : [ 'controls' ]
 		});
-		google
-				.setOnLoadCallback(Rats.Viz.GraduateEmploymentSurvey.Qualification.query);
+		google.setOnLoadCallback(Rats.Viz.GraduateEmploymentSurvey.Qualification.query);
 	</script>
 
 	<!-- BEGIN js for tweet button -->

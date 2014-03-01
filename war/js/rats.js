@@ -1177,7 +1177,7 @@ Rats.Viz.GraduateEmploymentSurvey.Qualification.dashboard = function(response) {
             }
         },
         'state' : {
-            'selectedValues' : ['2012']
+            'selectedValues' : ['2013']
         }
     });
 
