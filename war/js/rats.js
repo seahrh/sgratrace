@@ -1216,7 +1216,7 @@ Rats.Viz.GraduateEmploymentSurvey.Qualification.dashboard = function(response) {
     });
 
     var chart = new google.visualization.ChartWrapper({
-        "containerId" : "chart1",
+        "containerId" : "chart2",
         "chartType" : "ComboChart",
 
         "options" : {
@@ -1285,10 +1285,81 @@ Rats.Viz.GraduateEmploymentSurvey.Qualification.dashboard = function(response) {
     chart.setView({
         'columns' : [0, 6, 7, 8, 5]
     });
+    
+    var bubbleChart = new google.visualization.ChartWrapper({
+        "chartType" : "BubbleChart",
+        "containerId" : "chart1",
+        "options" : {
+            "title" : "Median Monthly Gross Starting Salary and Employment Rate of University Graduates",
+            "titlePosition" : "out",
+            "axisTitlesPosition" : "out",
+            "legend" : {
+                "position" : "top",
+                "alignment" : "left",
+                "textStyle" : {
+                    "fontSize" : 11
+                }
+            },
+            "chartArea" : {
+                "width" : "100%",
+                "height" : "80%",
+                "top" : 45
+            },
+            "hAxis" : {
+                "title" : "Full-Time Permanent Employment Rate",
+                "textPosition" : "in",
+                "textStyle" : {
+                    "fontSize" : 16
+                },
+                 "gridlines" : {
+                    "count" : 12
+                },
+                // min and max gridlines to minimize cropping
+                "minValue" : .5,
+                "maxValue" : 1.05
+            },
+            "vAxis" : {
+                "title" : "",
+                "textPosition" : "in",
+                "textStyle" : {
+                    "fontSize" : 16
+                },
+                // min 1600 to prevent low pay bubbles from cropping
+                // max 2600 to prevent post NS bubbles from cropping
+                "minValue" : 2000,
+                "maxValue" : 6000
+            },
+            "sizeAxis" : {
+                "minSize" : 10,
+                "maxSize" : 10
+            },
+            "bubble" : {
+                "textStyle" : {
+                    "fontSize" : 10,
+                    "color" : "none"
+                }
+            },
+            "tooltip" : {
+                "textStyle" : {
+                    "fontSize" : 14
+                }
+            }
+        }
+    });
+
+    // Bubble ID: Course
+    // X-coordinate: Employment Rate
+    // Y-coordinate: Median Salary
+    // Color: Course Category
+    // Size:
+    bubbleChart.setView({
+        'columns' : [0, 5, 7, 3]
+    });
+
 
     var tableChart = new google.visualization.ChartWrapper({
         'chartType' : 'Table',
-        'containerId' : 'chart2'
+        'containerId' : 'chart3'
     });
 
     if (Rats.getUserDevice() <= Rats.Constants.TABLET) {
@@ -1305,7 +1376,7 @@ Rats.Viz.GraduateEmploymentSurvey.Qualification.dashboard = function(response) {
         });
     }
 
-    dashboard.bind([qualificationControl, ihlControl, yearControl, facultyControl], [chart, tableChart]);
+    dashboard.bind([qualificationControl, ihlControl, yearControl, facultyControl], [chart, bubbleChart, tableChart]);
 
     dashboard.draw(data);
 };
@@ -1430,9 +1501,12 @@ Rats.Viz.GraduateEmploymentSurvey.Diploma.dashboard = function(response) {
                 "textStyle" : {
                     "fontSize" : 16
                 },
+                "gridlines" : {
+                    "count" : 9  
+                },
                 // min and max gridlines to minimize cropping
-                "minValue" : .45,
-                "maxValue" : 1
+                "minValue" : .3,
+                "maxValue" : 1.1
             },
             "vAxis" : {
                 "title" : "",
@@ -1451,7 +1525,8 @@ Rats.Viz.GraduateEmploymentSurvey.Diploma.dashboard = function(response) {
             },
             "bubble" : {
                 "textStyle" : {
-                    "fontSize" : 10
+                    "fontSize" : 10,
+                    "color" : "none"
                 }
             },
             "tooltip" : {

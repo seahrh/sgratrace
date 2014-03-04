@@ -170,10 +170,9 @@
 						<div id="control3"></div>
 						<div id="control4"></div>
 					</div>
-
+					<div class="alert alert-info hidden-phone"><strong>PRO-TIP: Too many coloured bubbles for your liking?</strong> You can filter the chart data using the controls above. For example, compare business degrees by selecting the following faculties: NUS Business School, School of Business (SMU) and Nanyang Business School.</div>
 					<div id="chart1" class="gviz chart hidden-phone"></div>
-
-
+                    <div id="chart2" class="gviz chart hidden-phone"></div>
 					<p class="muted">
 						<small>Source: <a
 							href="//docs.google.com/folder/d/0B7gBv2Jut0VxeFBvc0xSa2NlMWc/edit?usp=sharing"
@@ -182,14 +181,10 @@
 							University of Singapore (NUS), Nanyang Technological University
 							(NTU) and Singapore Management University (SMU).
 						</small>
-					</p>
-					
-					
-					<div id="chart2"></div>
+					</p>					
+					<div id="chart3"></div>
 				</div>
-
 				<hr class="footer-line" />
-
 			</div>
 		</div>
 	</div>
@@ -294,7 +289,7 @@
 			
 			// Tooltip for table chart
 			
-			$("#chart2").tooltip({
+			$("#chart3").tooltip({
 				"title" : "Click on the column headers to sort the data",
 				"placement" : "top",
 				"html" : false,

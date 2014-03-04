@@ -68,8 +68,8 @@ Set the entire width of the combobox
 including input field and dropdown button
 */
 
-.gviz.control-occupation .goog-combobox {
-	width: 60em;
+.gviz.control-occupation .charts-combobox {
+	width: 50em;
 }
 
 /*
@@ -77,9 +77,9 @@ Set the width of the input field
 and the dropdown list below it
 */
 
-.gviz.control-occupation .goog-combobox .goog-menu,
-.gviz.control-occupation .goog-combobox.goog-inline-block > input {
-	width: 58em;
+.gviz.control-occupation .charts-combobox .charts-menu,
+.gviz.control-occupation .charts-combobox.charts-inline-block > input {
+	width: 48em;
 }
 
 /* Default chart size */
@@ -205,17 +205,17 @@ and the dropdown list below it
 ********************************************************/
 
 @media ( max-width : 979px) {
-	.goog-menu-vertical {
+	.charts-menu-vertical {
 		max-height: 15em;
 	}
 
-	.gviz.control-occupation .goog-combobox {
-		width: 45em;
+	.gviz.control-occupation .charts-combobox {
+		width: 40em;
 	}
 
-	.gviz.control-occupation .goog-combobox .goog-menu,
-	.gviz.control-occupation .goog-combobox.goog-inline-block>input {
-		width: 43em;
+	.gviz.control-occupation .charts-combobox .charts-menu,
+	.gviz.control-occupation .charts-combobox.charts-inline-block>input {
+		width: 38em;
 	}
 	
 }
