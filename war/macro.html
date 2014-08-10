@@ -1,287 +1,295 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta itemprop="name" content="The Great Singapore Rat Race">
-<meta itemprop="description" content="Compare your pay!">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta itemprop="name" content="The Great Singapore Rat Race">
+        <meta itemprop="description" content="Compare your pay!">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- BEGIN Facebook Open Graph tags -->
+        <meta property="og:title" content="The Great Singapore Rat Race" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://sgratrace.appspot.com/" />
+        <meta property="og:image" content="" />
+        <meta property="og:site_name" content="The Great Singapore Rat Race" />
+        <meta property="fb:app_id" content="" />
+        <!-- END Facebook Open Graph tags -->
+        <title>The Great Singapore Rat Race</title>
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"
+        type="text/css">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css"
+        type="text/css">
+        <link rel="stylesheet" href="styles/rats.css" type="text/css">
+        <script type="text/javascript"
+        src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] ||
+                function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-<!-- BEGIN Facebook Open Graph tags -->
-<meta property="og:title" content="The Great Singapore Rat Race" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://sgratrace.appspot.com/" />
-<meta property="og:image" content="" />
-<meta property="og:site_name" content="The Great Singapore Rat Race" />
-<meta property="fb:app_id" content="" />
-<!-- END Facebook Open Graph tags -->
+            ga('create', 'UA-37611059-1', 'auto');
+            ga('send', 'pageview');
 
-<title>The Great Singapore Rat Race</title>
+        </script>
+    </head>
+    <body class="page-citizen">
+        <!-- Javascript SDK for Facebook Like Button HTML5 Plugin -->
+        <div id="fb-root"></div>
+        <script>
+            ( function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id))
+                        return;
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+        </script>
+        <!-- /Javascript SDK for Facebook Like Button HTML5 Plugin -->
 
-<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"
-	type="text/css">
-<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css"
-	type="text/css">
-<link rel="stylesheet" href="styles/rats.css" type="text/css">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="container">
 
-<script type="text/javascript"
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+                    <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+                    <a class="btn btn-navbar" data-toggle="collapse"
+                    data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
 
-<script type="text/javascript">
-	var _gaq = _gaq || [];
-	_gaq.push([ '_setAccount', 'UA-37611059-1' ]);
-	_gaq.push([ '_trackPageview' ]);
+                    <a class="brand" href="index.html">The Great Singapore Rat Race</a>
 
-	(function() {
-		var ga = document.createElement('script');
-		ga.type = 'text/javascript';
-		ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl'
-				: 'http://www')
-				+ '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0];
-		s.parentNode.insertBefore(ga, s);
-	})();
-</script>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="dropdown active">
+                                <a class="dropdown-toggle"
+                                data-toggle="dropdown" href="#">Macro <b class="caret"></b> </a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                    <li class="nav-header">
+                                        Income Trends
+                                    </li>
+                                    <li class="active">
+                                        <a href="macro.html">Citizens</a>
+                                    </li>
+                                    <li>
+                                        <a href="household.html">Households</a>
+                                    </li>
+                                </ul>
+                            </li>
 
-</head>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle"
+                                data-toggle="dropdown" href="#">Occupation <b class="caret"></b> </a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
 
-<body class="page-citizen">
-	<!-- Javascript SDK for Facebook Like Button HTML5 Plugin -->
-	<div id="fb-root"></div>
-	<script>
-		(function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id))
-				return;
-			js = d.createElement(s);
-			js.id = id;
-			js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-	</script>
-	<!-- /Javascript SDK for Facebook Like Button HTML5 Plugin -->
+                                    <li class="nav-header">
+                                        Occupation Wages
+                                    </li>
+                                    <li>
+                                        <a href="age.html">Age</a>
+                                    </li>
+                                    <li>
+                                        <a href="industry.html">Industry</a>
+                                    </li>
+                                </ul>
+                            </li>
 
+                            <li class="dropdown">
+                                <a class="dropdown-toggle"
+                                data-toggle="dropdown" href="#">Graduates <b class="caret"></b> </a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                    <li>
+                                        <a href="grad-overview.html">Overview</a>
+                                    </li>
+                                    <li class="nav-header">
+                                        Starting Pay
+                                    </li>
+                                    <li>
+                                        <a href="index.html">Universities</a>
+                                    </li>
+                                    <li>
+                                        <a href="diploma.html">Polytechnics</a>
+                                    </li>
+                                </ul>
+                            </li>
 
-	<div class="navbar">
-		<div class="navbar-inner">
-			<div class="container">
+                            <li>
+                                <a href="about.html">About</a>
+                            </li>
+                        </ul>
+                        <div id="gplus-button" class="pull-right">
+                            <!-- g-plusone button does not display properly if mixed with other css classes -->
+                            <div class="g-plusone" data-size="medium"
+                            data-href="http://pay.sgcharts.com/"></div>
+                        </div>
+                        <div id="tweet-button" class="pull-right">
+                            <a href="https://twitter.com/share" class="twitter-share-button"
+                            data-url="http://pay.sgcharts.com/"
+                            data-text="Compare pay of jobs in Singapore">Tweet</a>
+                        </div>
+                        <div id="fb-like-button" class="pull-right">
+                            <div class="fb-like" data-href="http://sgratrace.appspot.com/"
+                            data-send="false" data-layout="button_count"
+                            data-show-faces="false"></div>
+                        </div>
+                    </div>
+                    <!-- /.nav-collapse -->
 
+                </div>
+            </div>
+        </div>
+        <!-- /.navbar -->
 
-				<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-				<a class="btn btn-navbar" data-toggle="collapse"
-					data-target=".nav-collapse"> 
-					<span class="icon-bar"></span> 
-					<span class="icon-bar"></span> 
-					<span class="icon-bar"></span>
-				</a> 
-				
-				
-				<a class="brand" href="index.html">The Great Singapore Rat Race</a>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="offset1 span10">
+                    <h1 class="inline-top"> Income Trends <small>Singapore Citizens</small></h1>
 
+                    <div id="infobar" class="pull-right hidden-phone">
+                        <a  id="glossary"
+                        href="#" class="btn btn-info" rel="popover"><i
+                        class="icon-info-sign icon-white"></i> Glossary</a>
+                        <a id="chartdata"
+                        href="https://docs.google.com/spreadsheet/ccc?key=0ArgBv2Jut0VxdDVaYzczVzBpbGdOZWxORFlORzdmN3c&usp=sharing#gid=0"
+                        class="btn btn-primary" target="_blank"><i
+                        class="icon-th-list icon-white"></i> Chart Data</a>
+                    </div>
 
-				<div class="nav-collapse collapse">
-					<ul class="nav">
-						<li class="dropdown active"><a class="dropdown-toggle"
-							data-toggle="dropdown" href="#">Macro <b class="caret"></b>
-						</a>
-							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-								<li class="nav-header">Income Trends</li>
-								<li class="active"><a href="macro.html">Citizens</a></li>
-								<li><a href="household.html">Households</a></li>
-							</ul></li>
+                    <p class="muted">
+                        What is the income gap between the bottom 20% and the median?
+                    </p>
 
+                    <div id="chart1" class="gviz chart"></div>
+                    <div id="chart2" class="gviz chart"></div>
 
-						<li class="dropdown"><a class="dropdown-toggle"
-							data-toggle="dropdown" href="#">Occupation <b class="caret"></b>
-						</a>
-							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                    <p class="muted">
+                        <small>Source: Manpower Research and Statistical Department, Ministry of Manpower <a
+                            href="http://mom.gov.sg/statistics-publications/national-labour-market-information/publications/Pages/employment-situation.aspx"
+                            target="_blank">4th Quarter Report on
+                            Employment Situation 2012</a>. The annual inflation rate is obtained
+                            from the <a href="http://www.singstat.gov.sg/stats/themes/economy/hist/cpi.html"
+                            target="_blank">Department of Statistics</a>. Figures in Singapore Dollars. </small>
+                    </p>
+                    <p id="notes">
+                        Notes
+                    </p>
 
-								<li class="nav-header">Occupation Wages</li>
-								<li><a href="age.html">Age</a></li>
-								<li><a href="industry.html">Industry</a></li>
-							</ul></li>
+                    <ol>
+                        <li>
+                            Data excludes full-time National Servicemen.
+                        </li>
+                        <li>
+                            The Comprehensive Labour Force Survey was not conducted in
+                            2005 due to the conduct of the General Household Survey 2005 by
+                            the Department of Statistics, Ministry of Trade and Industry.
+                        </li>
+                        <li>
+                            As the income data are captured from a sample survey, the
+                            income changes for the 20th percentile nearer the end of the
+                            income spectrum tend to be more volatile over shorter (e.g.
+                            year-on-year) than longer periods (e.g. 5 or 10 years).
+                        </li>
+                    </ol>
 
+                    <hr class="footer-line" />
 
-						<li class="dropdown"><a class="dropdown-toggle"
-							data-toggle="dropdown" href="#">Graduates <b class="caret"></b>
-						</a>
-							<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-								<li><a href="grad-overview.html">Overview</a></li>
-								<li class="nav-header">Starting Pay</li>
-								<li><a href="index.html">Universities</a></li>
-								<li><a href="diploma.html">Polytechnics</a></li>
-							</ul></li>
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
 
+        <script type="text/javascript" src="js/spin.min.js"></script>
 
-						<li><a href="about.html">About</a></li>
-					</ul>
-					<div id="gplus-button" class="pull-right">
-						<!-- g-plusone button does not display properly if mixed with other css classes -->
-						<div class="g-plusone" data-size="medium"
-							data-href="http://sgratrace.appspot.com/"></div>
-					</div>
-					<div id="tweet-button" class="pull-right">
-						<a href="https://twitter.com/share" class="twitter-share-button"
-							data-url="http://sgratrace.appspot.com/"
-							data-text="The Great Singapore Rat Race - don't be the last rat!">Tweet</a>
-					</div>
-					<div id="fb-like-button" class="pull-right">
-						<div class="fb-like" data-href="http://sgratrace.appspot.com/"
-							data-send="false" data-layout="button_count"
-							data-show-faces="false"></div>
-					</div>
-				</div>
-				<!-- /.nav-collapse -->
+        <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 
-			</div>
-		</div>
-	</div>
-	<!-- /.navbar -->
+        <script type="text/javascript" src="js/rats.js"></script>
 
-	<div class="container-fluid">
-		<div class="row-fluid">
-			<div class="offset1 span10">
-				<h1 class="inline-top">
-					Income Trends <small>Singapore Citizens</small>
-				</h1>
+        <script type="text/javascript">
+            // Show a spinning load indicator
+            // while the page is loading
+            var spinner;
 
-				<div id="infobar" class="pull-right hidden-phone">
-					<a  id="glossary"
-						href="#" class="btn btn-info" rel="popover"><i
-						class="icon-info-sign icon-white"></i> Glossary</a> 
-					<a id="chartdata"
-						href="https://docs.google.com/spreadsheet/ccc?key=0ArgBv2Jut0VxdDVaYzczVzBpbGdOZWxORFlORzdmN3c&usp=sharing#gid=0"
-						class="btn btn-primary" target="_blank"><i
-						class="icon-th-list icon-white"></i> Chart Data</a> 
-				</div>
-				
-				<p class="muted">
-					What is the income gap between the bottom 20% and the median?
-				</p>
+            $(document).ready(function() {
+                // Once the DOM is loaded, start spinning
+                spinner = Rats.UI.LoadAnimation.start();
 
-				<div id="chart1" class="gviz chart"></div>
-				<div id="chart2" class="gviz chart"></div>
+                pageUI();
 
-				<p class="muted">
-					<small>Source: Manpower Research and Statistical Department, Ministry of Manpower <a
-						href="http://mom.gov.sg/statistics-publications/national-labour-market-information/publications/Pages/employment-situation.aspx"
-						target="_blank">4th Quarter Report on
-							Employment Situation 2012</a>. The annual inflation rate is obtained
-						from the <a href="http://www.singstat.gov.sg/stats/themes/economy/hist/cpi.html"
-						target="_blank">Department of Statistics</a>. Figures in Singapore Dollars.
-					</small>
-				</p>
-				<p id="notes">Notes</p>
+            });
 
-				<ol>
-					<li>Data excludes full-time National Servicemen.</li>
-					<li>The Comprehensive Labour Force Survey was not conducted in
-						2005 due to the conduct of the General Household Survey 2005 by
-						the Department of Statistics, Ministry of Trade and Industry.</li>
-					<li>As the income data are captured from a sample survey, the
-						income changes for the 20th percentile nearer the end of the
-						income spectrum tend to be more volatile over shorter (e.g.
-						year-on-year) than longer periods (e.g. 5 or 10 years).</li>
-				</ol>
+            $(window).load(function() {
+                // Once the page is fully loaded, stop spinning
+                Rats.UI.LoadAnimation.stop(spinner);
+            });
 
-				<hr class="footer-line" />
+            function pageUI() {
+                if (Rats.getUserDevice() <= Rats.Constants.PHONE) {
+                    $(".navbar a.brand").text(Rats.Constants.APP_SHORT_NAME);
+                }
 
-			</div>
-		</div>
-	</div>
-	<!-- /.container-fluid -->
-	
-	<script type="text/javascript" src="js/spin.min.js"></script>
-	
-	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+                // Tooltip for chart data link
 
-	<script type="text/javascript" src="js/rats.js"></script>
-	
-	<script type="text/javascript">
-		// Show a spinning load indicator
-		// while the page is loading
-		var spinner;
-		
-		$(document).ready(function(){
-			// Once the DOM is loaded, start spinning
-			spinner = Rats.UI.LoadAnimation.start();
-			
-			pageUI();
-			
-		});
-		
-		$(window).load(function(){
-			// Once the page is fully loaded, stop spinning
-			Rats.UI.LoadAnimation.stop(spinner);
-		});
-		
-		function pageUI() {
-			if (Rats.getUserDevice() <= Rats.Constants.PHONE) {
-				$(".navbar a.brand").text(Rats.Constants.APP_SHORT_NAME);
-			}
-			
-			// Tooltip for chart data link
-			
-			$("#infobar #chartdata").tooltip({
-				title : "Get the chart data!",
-				placement : "bottom",
-				html : "false",
-				trigger : "hover"
-			});
+                $("#infobar #chartdata").tooltip({
+                    title : "Get the chart data!",
+                    placement : "bottom",
+                    html : "false",
+                    trigger : "hover"
+                });
 
-			// Popover for glossary
-			
-			$("#infobar #glossary").popover({
-				title : "What do the terms mean?",
-				placement : "bottom",
-				html : true,
-				trigger : "hover",
-				content : "<ol><li><strong>Monthly Gross Wage</strong> refers to the sum of the basic wage, overtime payments, " + 
-				"commissions, allowances, and other regular cash payments before deduction of employee CPF contributions " +
-				"and personal income tax. However, it excludes employer CPF contributions, bonuses, stock options, " + 
-				"other lump sum payments and payments-in-kind.</li><li><strong>Median (50th percentile)</strong> refers " +
-				"to the wage level at the middle of the income distribution which divides the bottom half of wage earners " +
-				"from the upper half.</li></ol>"
-			});
-			
-		};
-	</script>
+                // Popover for glossary
 
-	<!-- Required for loading Google Visualization API -->
-	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+                $("#infobar #glossary").popover({
+                    title : "What do the terms mean?",
+                    placement : "bottom",
+                    html : true,
+                    trigger : "hover",
+                    content : "<ol><li><strong>Monthly Gross Wage</strong> refers to the sum of the basic wage, overtime payments, " + "commissions, allowances, and other regular cash payments before deduction of employee CPF contributions " + "and personal income tax. However, it excludes employer CPF contributions, bonuses, stock options, " + "other lump sum payments and payments-in-kind.</li><li><strong>Median (50th percentile)</strong> refers " + "to the wage level at the middle of the income distribution which divides the bottom half of wage earners " + "from the upper half.</li></ol>"
+                });
 
-	<script type="text/javascript">
-		// Loads the Google Visualization libraries
-		google.load('visualization', '1', {
-			'packages' : [ 'controls' ]
-		});
-		google.setOnLoadCallback(Rats.Viz.Macro.Citizen.query);
-	</script>
+            };
+        </script>
 
-	<!-- BEGIN js for tweet button -->
-	<script>
-		!function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (!d.getElementById(id)) {
-				js = d.createElement(s);
-				js.id = id;
-				js.src = "//platform.twitter.com/widgets.js";
-				fjs.parentNode.insertBefore(js, fjs);
-			}
-		}(document, "script", "twitter-wjs");
-	</script>
-	<!-- END js for tweet button -->
-	<!-- BEGIN js for google +1 button -->
-	<script type="text/javascript">
-		(function() {
-			var po = document.createElement('script');
-			po.type = 'text/javascript';
-			po.async = true;
-			po.src = 'https://apis.google.com/js/plusone.js';
-			var s = document.getElementsByTagName('script')[0];
-			s.parentNode.insertBefore(po, s);
-		})();
-	</script>
-	<!-- END js for google +1 button -->
-</body>
+        <!-- Required for loading Google Visualization API -->
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+        <script type="text/javascript">
+            // Loads the Google Visualization libraries
+            google.load('visualization', '1', {
+                'packages' : ['controls']
+            });
+            google.setOnLoadCallback(Rats.Viz.Macro.Citizen.query);
+        </script>
+
+        <!-- BEGIN js for tweet button -->
+        <script>
+            ! function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "//platform.twitter.com/widgets.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, "script", "twitter-wjs");
+        </script>
+        <!-- END js for tweet button -->
+        <!-- BEGIN js for google +1 button -->
+        <script type="text/javascript">
+            (function() {
+                var po = document.createElement('script');
+                po.type = 'text/javascript';
+                po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(po, s);
+            })();
+        </script>
+        <!-- END js for google +1 button -->
+    </body>
 </html>
