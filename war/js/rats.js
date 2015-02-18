@@ -698,7 +698,7 @@ Rats.Viz.Macro.Household.dashboard = function(response) {
             }
         },
         'state' : {
-            'selectedValues' : ['Excluding']
+            'selectedValues' : ['Including']
         }
     });
 
@@ -738,9 +738,9 @@ Rats.Viz.Macro.Household.dashboard = function(response) {
     });
 
     // Column 0: Decile,
-    // Columns 2 - 15: Income figures from 2000 - 2013
+    // Columns 2 - 16: Income figures from 2000-2014
     chart.setView({
-        'columns' : [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+        'columns' : [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
     });
 
     var perMemberChart = new google.visualization.ChartWrapper({
@@ -779,9 +779,9 @@ Rats.Viz.Macro.Household.dashboard = function(response) {
     });
 
     // Column 0: Decile,
-    // Columns 16 - 29: Income figures from 2000 - 2013
+    // Columns 17-31: Income figures from 2000-2014
     perMemberChart.setView({
-        'columns' : [0, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+        'columns' : [0, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
     });
 
     dashboard.bind([decileControl, employerContribControl], [chart, perMemberChart]);
@@ -832,7 +832,7 @@ Rats.Viz.Macro.Household.inflationDashboard = function(response) {
             }
         },
         'state' : {
-            'selectedValues' : ['Excluding']
+            'selectedValues' : ['Including']
         }
     });
 
@@ -1431,11 +1431,11 @@ Rats.Viz.GraduateEmploymentSurvey.Diploma.dashboard = function(response) {
                 'allowTyping' : false,
                 'allowMultiple' : false,
                 'selectedValuesLayout' : 'aside',
-                'caption' : 'Everything'
+                'caption' : 'All'
             }
         },
         'state' : {
-            'selectedValues' : ['2011']
+            'selectedValues' : ['2013']
         }
     });
 
@@ -1451,7 +1451,7 @@ Rats.Viz.GraduateEmploymentSurvey.Diploma.dashboard = function(response) {
                 'allowTyping' : false,
                 'allowMultiple' : true,
                 'selectedValuesLayout' : 'aside',
-                'caption' : 'Everything'
+                'caption' : 'All'
             }
         }
     });
@@ -1468,7 +1468,7 @@ Rats.Viz.GraduateEmploymentSurvey.Diploma.dashboard = function(response) {
                 'allowTyping' : false,
                 'allowMultiple' : false,
                 'selectedValuesLayout' : 'aside',
-                'caption' : 'Everything'
+                'caption' : 'All'
             }
         },
         'state' : {
