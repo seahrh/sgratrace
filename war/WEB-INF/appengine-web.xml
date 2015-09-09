@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
   <application>sgratrace</application>
-  <version>afterplugfest</version>
+  <version>3</version>
+  
+  <!-- version "afterplugfest" is after the plugfest competition. -->
+  <!-- version 3 is the mdl look. -->
 
   <!--
     Allows App Engine to send multiple requests to one instance in parallel:

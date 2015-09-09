@@ -324,25 +324,7 @@ Rats.Viz.Occupation.Age.dashboard = function(response) {
 
     var selection = [];
 
-    // Occupation filter is hidden at device size
-    // of phone size and smaller
-    // If occupation filter is visible
-    // select default values
-
-    if (Rats.getUserDevice() > Rats.Constants.PHONE) {
-
-        /*
-         selection.push("Carpenter",
-         "Excavating/ Trench digging machine operator",
-         "Lorry driver",
-         "Crane/ Hoist operator",
-         "Supervisor/ General foreman (building and related trades)",
-         "Machinery mechanic",
-         "Plasterer",
-         "Welder");*/
-
-        selection.push("Company director", "Hotel operations/ Lodging services manager", "Special education teacher", "Pre-primary education teacher", "Accountant", "Registered nurse", "Crane/ Hoist operator", "Bus driver", "Cleaner in offices and other establishments", "Financial/ Investment adviser");
-    }
+    selection.push("Company director", "Hotel operations/ Lodging services manager", "Special education teacher", "Pre-primary education teacher", "Accountant", "Registered nurse", "Crane/ Hoist operator", "Bus driver", "Cleaner in offices and other establishments", "Financial/ Investment adviser");
 
     // Filter by Occupation
     var occupationControl = new google.visualization.ControlWrapper({
@@ -797,7 +779,7 @@ Rats.Viz.Macro.Household.inflationDashboard = function(response) {
     var dashboard = new google.visualization.Dashboard(document.getElementById(containerId));
 
     // Column 0: Year
-    // Column 1: CPI, 
+    // Column 1: CPI,
     // Columns 3 - 12: 1st through 10th Decile
     var chartColumns = [0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
@@ -966,7 +948,7 @@ Rats.Viz.Macro.Household.inflationDashboard = function(response) {
     // Register a listener to be notified once the dashboard is ready.
     google.visualization.events.addListener(dashboard, 'ready', ready);
 
-    dashboard.bind([yearControl,employerContribControl], [chart, perMemberChart]);
+    dashboard.bind([yearControl, employerContribControl], [chart, perMemberChart]);
 
     dashboard.draw(data);
 
@@ -1285,7 +1267,7 @@ Rats.Viz.GraduateEmploymentSurvey.Qualification.dashboard = function(response) {
     chart.setView({
         'columns' : [0, 6, 7, 8, 5]
     });
-    
+
     var bubbleChart = new google.visualization.ChartWrapper({
         "chartType" : "BubbleChart",
         "containerId" : "chart1",
@@ -1311,7 +1293,7 @@ Rats.Viz.GraduateEmploymentSurvey.Qualification.dashboard = function(response) {
                 "textStyle" : {
                     "fontSize" : 16
                 },
-                 "gridlines" : {
+                "gridlines" : {
                     "count" : 12
                 },
                 // min and max gridlines to minimize cropping
@@ -1355,7 +1337,6 @@ Rats.Viz.GraduateEmploymentSurvey.Qualification.dashboard = function(response) {
     bubbleChart.setView({
         'columns' : [0, 5, 7, 3]
     });
-
 
     var tableChart = new google.visualization.ChartWrapper({
         'chartType' : 'Table',
@@ -1502,7 +1483,7 @@ Rats.Viz.GraduateEmploymentSurvey.Diploma.dashboard = function(response) {
                     "fontSize" : 16
                 },
                 "gridlines" : {
-                    "count" : 9  
+                    "count" : 9
                 },
                 // min and max gridlines to minimize cropping
                 "minValue" : .3,
