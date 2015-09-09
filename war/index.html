@@ -18,177 +18,124 @@
         <meta name="description" content="Starting Salary of NUS, NTU, SMU Graduates - Singapore charts based on official government data">
         <link href="http://pay.sgcharts.com/index.html" rel="canonical">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css" rel="stylesheet">
+        <link href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.pink-green.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <link rel="stylesheet" href="styles/rats.css">
         <script src="/js/ga.js"></script>
     </head>
     <body class="page-degree">
-        <!-- Javascript SDK for Facebook Like Button HTML5 Plugin -->
-        <div id="fb-root"></div>
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                    <!-- Title -->
+                    <span class="mdl-layout-title">SGCharts: Rat Race</span>
+                    <!-- Add spacer, to align navigation to the right -->
+                    <div class="mdl-layout-spacer"></div>
+                    <!-- Navigation. We hide it in small screens. -->
+                    <nav class="mdl-navigation mdl-layout--large-screen-only">
+                        <a class="mdl-navigation__link" href="http://coe.sgcharts.com/">COE</a>
+                        <a class="mdl-navigation__link" href="http://pay.sgcharts.com/">Rat Race</a>
+                        <a class="mdl-navigation__link" href="http://outbreak.sgcharts.com/">Outbreak</a>
+                        <a class="mdl-navigation__link" href="http://www.sgcharts.com/">About</a>
+                    </nav>
+                </div>
+            </header>
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout-title">SGCharts</span>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="http://www.sgcharts.com/">About</a>
+                    <div class="divider-x paper-grey-400"></div>
+                    <span class="mdl-navigation__link f-size-11 f-paper-indigo-500">Rat Race</span>
+                    <a class="mdl-navigation__link" href="http://pay.sgcharts.com/age.html">Wages by Age</a>
+                    <a class="mdl-navigation__link" href="http://pay.sgcharts.com/industry.html">Wages by Industry</a>
+                    <a class="mdl-navigation__link" href="http://pay.sgcharts.com/index.html">University Grads</a>
+                    <a class="mdl-navigation__link" href="http://pay.sgcharts.com/diploma.html">Polytechnic Grads</a>
+                    <a class="mdl-navigation__link" href="http://pay.sgcharts.com/grad-overview.html">Uni &amp; Poly &amp; ITE</a>
+                    <a class="mdl-navigation__link" href="http://pay.sgcharts.com/household.html">Household Income</a>
+                    <a class="mdl-navigation__link" href="http://pay.sgcharts.com/macro.html">Citizens' Income</a>
+                    <div class="divider-x paper-grey-400"></div>
+                    <span class="mdl-navigation__link f-size-11 f-paper-indigo-500">COE</span>
+                    <a class="mdl-navigation__link" href="http://coe.sgcharts.com/">Prices &amp; Quotas</a>
+                    <a class="mdl-navigation__link" href="http://coe.sgcharts.com/brands.html">Car Brands</a>
+                    <div class="divider-x paper-grey-400"></div>
+                    <span class="mdl-navigation__link f-size-11 f-paper-indigo-500">Outbreak</span>
+                    <a class="mdl-navigation__link" href="http://outbreak.sgcharts.com/">Map</a>
+                    <a class="mdl-navigation__link" href="http://outbreak.sgcharts.com/data">Data</a>
+                </nav>
+            </div>
+            <main class="mdl-layout__content relative">
+                <div class="page-content container-fluid">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div id="infobar" class="hidden-xs">
+                                <a  id="smu"
+                                href="http://www.moe.gov.sg/education/post-secondary/files/ges-smu.pdf"
+                                class="btn btn-danger" rel="popover" target="_blank"><i
+                                class="icon-comment icon-white"></i> SMU Top Earner?</a>
+                                <a id="glossary" href="#" class="btn" rel="popover"><i
+                                class="icon-info-sign"></i> Glossary</a>
+                                <a  id="chartdata"
+                                href="https://docs.google.com/spreadsheet/ccc?key=0ArgBv2Jut0VxdERtWEU4UE5BbFd2TnZzVW8yTlB5eFE&usp=sharing"
+                                class="btn" target="_blank"><i
+                                class="icon-th-list"></i> Chart Data</a>
+                            </div>
+                            <div class="page-header">
+                                <h1>University Graduates <small>Starting Salary By Degree</small></h1>
+                            </div>
+                            <p class="muted">
+                                What is the starting pay range of your degree?
+                                Which degree offers the best pay? Find out more in the charts below!
+                            </p>
+                            <div id="dashboard">
+                                <div class="well">
+                                    <div id="control1"></div>
+                                    <div id="control2"></div>
+                                    <div id="control3"></div>
+                                    <div id="control4"></div>
+                                </div>
+                                <div class="alert alert-info hidden-xs">
+                                    <strong>PRO-TIP: Too many coloured bubbles for your liking?</strong> You can filter the chart data using the controls above. For example, compare business degrees by selecting the following faculties: NUS Business School, School of Business (SMU) and Nanyang Business School.
+                                </div>
+                                <div id="chart1" class="gviz chart"></div>
+                                <div id="chart2" class="gviz chart"></div>
+                                <p class="muted">
+                                    <small>Source: <a
+                                        href="//docs.google.com/folder/d/0B7gBv2Jut0VxeFBvc0xSa2NlMWc/edit?usp=sharing"
+                                        target="_blank">Ministry of Education, Graduate Employment
+                                        Survey</a> 2009 - 2013. Universities refer to the National
+                                        University of Singapore (NUS), Nanyang Technological University
+                                        (NTU) and Singapore Management University (SMU). </small>
+                                </p>
+                                <div id="chart3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="mdl-mini-footer m-top-50">
+                    <div class="mdl-mini-footer__left-section">
+                        <div class="mdl-logo">
+                            Made by Team SGCharts with love. Contact us: admin (at) sgcharts (dot) com.
+                        </div>
+                    </div>
+                </footer>
+            </main>
+        </div>
+        <!-- Below the fold -->
+        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="/js/spin.min.js"></script>
+        <script src="/js/rats.js"></script>
+        <!-- Required for loading Google Visualization API -->
+        <script src="https://www.google.com/jsapi"></script>
         <script>
-            ( function(d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id))
-                        return;
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
-                    fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));
+            // Loads the Google Visualization libraries
+            google.load('visualization', '1', {
+                'packages' : ['controls']
+            });
+            google.setOnLoadCallback(Rats.Viz.GraduateEmploymentSurvey.Qualification.query);
         </script>
-        <!-- /Javascript SDK for Facebook Like Button HTML5 Plugin -->
-
-        <div class="navbar">
-            <div class="navbar-inner">
-                <div class="container">
-
-                    <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-                    <a class="btn btn-navbar" data-toggle="collapse"
-                    data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
-
-                    <a class="brand" href="index.html">The Great Singapore Rat
-                    Race</a>
-
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
-                            <li class="dropdown">
-                                <a class="dropdown-toggle"
-                                data-toggle="dropdown" href="#">Macro <b class="caret"></b> </a>
-                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                                    <li class="nav-header">
-                                        Income Trends
-                                    </li>
-                                    <li>
-                                        <a href="macro.html">Citizens</a>
-                                    </li>
-                                    <li>
-                                        <a href="household.html">Households</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="dropdown">
-                                <a class="dropdown-toggle"
-                                data-toggle="dropdown" href="#">Occupation <b class="caret"></b> </a>
-                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-
-                                    <li class="nav-header">
-                                        Occupation Wages
-                                    </li>
-                                    <li>
-                                        <a href="age.html">Age</a>
-                                    </li>
-                                    <li>
-                                        <a href="industry.html">Industry</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="dropdown active">
-                                <a class="dropdown-toggle"
-                                data-toggle="dropdown" href="#">Graduates <b class="caret"></b> </a>
-                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                                    <li>
-                                        <a href="grad-overview.html">Overview</a>
-                                    </li>
-                                    <li class="nav-header">
-                                        Starting Pay
-                                    </li>
-                                    <li class="active">
-                                        <a href="index.html">Universities</a>
-                                    </li>
-                                    <li>
-                                        <a href="diploma.html">Polytechnics</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="about.html">About</a>
-                            </li>
-                        </ul>
-                        <div id="gplus-button" class="pull-right">
-                            <!-- g-plusone button does not display properly if mixed with other css classes -->
-                            <div class="g-plusone" data-size="medium"
-                            data-href="http://pay.sgcharts.com/"></div>
-                        </div>
-                        <div id="tweet-button" class="pull-right">
-                            <a href="https://twitter.com/share" class="twitter-share-button"
-                            data-url="http://pay.sgcharts.com/"
-                            data-text="Compare pay of jobs in Singapore">Tweet</a>
-                        </div>
-                        <div id="fb-like-button" class="pull-right">
-                            <div class="fb-like" data-href="http://pay.sgcharts.com/"
-                            data-send="false" data-layout="button_count"
-                            data-show-faces="false"></div>
-                        </div>
-                    </div>
-                    <!-- /.nav-collapse -->
-
-                </div>
-            </div>
-        </div>
-        <!-- /.navbar -->
-
-        <div class="container-fluid">
-            <div class="row-fluid">
-                <div class="offset1 span10">
-                    <h1 class="inline-top"> Universities <small>Starting Pay</small></h1>
-
-                    <div id="infobar" class="pull-right visible-desktop">
-                        <a id="glossary" href="#" class="btn" rel="popover"><i
-                        class="icon-info-sign"></i> Glossary</a>
-                        <a 	id="smu"
-                        href="http://www.moe.gov.sg/education/post-secondary/files/ges-smu.pdf"
-                        class="btn btn-danger" rel="popover" target="_blank"><i
-                        class="icon-comment icon-white"></i> SMU Top Earner?</a>
-                        <a 	id="chartdata"
-                        href="https://docs.google.com/spreadsheet/ccc?key=0ArgBv2Jut0VxdERtWEU4UE5BbFd2TnZzVW8yTlB5eFE&usp=sharing"
-                        class="btn" target="_blank"><i
-                        class="icon-th-list"></i> Chart Data</a>
-                    </div>
-
-                    <p class="muted">
-                        What is the starting pay range of your degree?
-                        Which degree offers the best pay? Find out more in the charts below!
-                    </p>
-
-                    <div id="dashboard">
-                        <div class="well">
-                            <div id="control1"></div>
-                            <div id="control2"></div>
-                            <div id="control3"></div>
-                            <div id="control4"></div>
-                        </div>
-                        <div class="alert alert-info hidden-phone">
-                            <strong>PRO-TIP: Too many coloured bubbles for your liking?</strong> You can filter the chart data using the controls above. For example, compare business degrees by selecting the following faculties: NUS Business School, School of Business (SMU) and Nanyang Business School.
-                        </div>
-                        <div id="chart1" class="gviz chart hidden-phone"></div>
-                        <div id="chart2" class="gviz chart hidden-phone"></div>
-                        <p class="muted">
-                            <small>Source: <a
-                                href="//docs.google.com/folder/d/0B7gBv2Jut0VxeFBvc0xSa2NlMWc/edit?usp=sharing"
-                                target="_blank">Ministry of Education, Graduate Employment
-                                Survey</a> 2009 - 2013. Universities refer to the National
-                                University of Singapore (NUS), Nanyang Technological University
-                                (NTU) and Singapore Management University (SMU). </small>
-                        </p>
-                        <div id="chart3"></div>
-                    </div>
-                    <hr class="footer-line" />
-                </div>
-            </div>
-        </div>
-        <!-- /.container-fluid -->
-
-        <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-
-        <script type="text/javascript" src="js/rats.js"></script>
-
-        <script type="text/javascript" src="js/spin.min.js"></script>
-
-        <script type="text/javascript">
+        <script>
             // Show a spinning load indicator
             // while the page is loading
             var spinner;
@@ -207,9 +154,6 @@
             });
 
             function pageUI() {
-                if (Rats.getUserDevice() <= Rats.Constants.PHONE) {
-                    $(".navbar a.brand").text(Rats.Constants.APP_SHORT_NAME);
-                }
 
                 // Tooltip for degree filter
 
@@ -290,42 +234,5 @@
                 });
             };
         </script>
-
-        <!-- Required for loading Google Visualization API -->
-        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-
-        <script type="text/javascript">
-            // Loads the Google Visualization libraries
-            google.load('visualization', '1', {
-                'packages' : ['controls']
-            });
-            google.setOnLoadCallback(Rats.Viz.GraduateEmploymentSurvey.Qualification.query);
-        </script>
-
-        <!-- BEGIN js for tweet button -->
-        <script>
-            ! function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (!d.getElementById(id)) {
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = "//platform.twitter.com/widgets.js";
-                    fjs.parentNode.insertBefore(js, fjs);
-                }
-            }(document, "script", "twitter-wjs");
-        </script>
-        <!-- END js for tweet button -->
-        <!-- BEGIN js for google +1 button -->
-        <script type="text/javascript">
-            (function() {
-                var po = document.createElement('script');
-                po.type = 'text/javascript';
-                po.async = true;
-                po.src = 'https://apis.google.com/js/plusone.js';
-                var s = document.getElementsByTagName('script')[0];
-                s.parentNode.insertBefore(po, s);
-            })();
-        </script>
-        <!-- END js for google +1 button -->
     </body>
 </html>

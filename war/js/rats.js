@@ -108,15 +108,9 @@ Rats.Viz.Occupation.Industry.dashboard = function(response) {
     var dashboard = new google.visualization.Dashboard(document.getElementById(containerId));
 
     var selection = [];
-
-    // Occupation filter is hidden at device size
-    // of phone size and smaller
-    // If occupation filter is visible
-    // pre-select some values
-
-    if (Rats.getUserDevice() > Rats.Constants.PHONE) {
-        selection.push("Managing director/ Chief executive officer");
-    }
+   
+    selection.push("Managing director/ Chief executive officer");
+    
 
     // Filter occupation
 

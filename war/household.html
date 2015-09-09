@@ -18,232 +18,195 @@
         <meta name="description" content="Income Trends of Resident Households - Singapore charts based on official government data">
         <link href="http://pay.sgcharts.com/household.html" rel="canonical">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.indigo-pink.min.css" rel="stylesheet">
+        <link href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.pink-green.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <link rel="stylesheet" href="styles/rats.css">
         <script src="/js/ga.js"></script>
     </head>
     <body class="page-household">
-        <!-- Javascript SDK for Facebook Like Button HTML5 Plugin -->
-        <div id="fb-root"></div>
+        <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <header class="mdl-layout__header">
+                <div class="mdl-layout__header-row">
+                    <!-- Title -->
+                    <span class="mdl-layout-title">SGCharts: Rat Race</span>
+                    <!-- Add spacer, to align navigation to the right -->
+                    <div class="mdl-layout-spacer"></div>
+                    <!-- Navigation. We hide it in small screens. -->
+                    <nav class="mdl-navigation mdl-layout--large-screen-only">
+                        <a class="mdl-navigation__link" href="http://coe.sgcharts.com/">COE</a>
+                        <a class="mdl-navigation__link" href="http://pay.sgcharts.com/">Rat Race</a>
+                        <a class="mdl-navigation__link" href="http://outbreak.sgcharts.com/">Outbreak</a>
+                        <a class="mdl-navigation__link" href="http://www.sgcharts.com/">About</a>
+                    </nav>
+                </div>
+            </header>
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout-title">SGCharts</span>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="http://www.sgcharts.com/">About</a>
+                    <div class="divider-x paper-grey-400"></div>
+                    <span class="mdl-navigation__link f-size-11 f-paper-indigo-500">Rat Race</span>
+                    <a class="mdl-navigation__link" href="http://pay.sgcharts.com/age.html">Wages by Age</a>
+                    <a class="mdl-navigation__link" href="http://pay.sgcharts.com/industry.html">Wages by Industry</a>
+                    <a class="mdl-navigation__link" href="http://pay.sgcharts.com/index.html">University Grads</a>
+                    <a class="mdl-navigation__link" href="http://pay.sgcharts.com/diploma.html">Polytechnic Grads</a>
+                    <a class="mdl-navigation__link" href="http://pay.sgcharts.com/grad-overview.html">Uni &amp; Poly &amp; ITE</a>
+                    <a class="mdl-navigation__link" href="http://pay.sgcharts.com/household.html">Household Income</a>
+                    <a class="mdl-navigation__link" href="http://pay.sgcharts.com/macro.html">Citizens' Income</a>
+                    <div class="divider-x paper-grey-400"></div>
+                    <span class="mdl-navigation__link f-size-11 f-paper-indigo-500">COE</span>
+                    <a class="mdl-navigation__link" href="http://coe.sgcharts.com/">Prices &amp; Quotas</a>
+                    <a class="mdl-navigation__link" href="http://coe.sgcharts.com/brands.html">Car Brands</a>
+                    <div class="divider-x paper-grey-400"></div>
+                    <span class="mdl-navigation__link f-size-11 f-paper-indigo-500">Outbreak</span>
+                    <a class="mdl-navigation__link" href="http://outbreak.sgcharts.com/">Map</a>
+                    <a class="mdl-navigation__link" href="http://outbreak.sgcharts.com/data">Data</a>
+                </nav>
+            </div>
+            <main class="mdl-layout__content relative">
+                <div class="page-content container-fluid">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div id="infobar" class="hidden-xs">
+                                <a id="glossary" href="#" class="btn btn-info" rel="popover"><i
+                                class="icon-info-sign icon-white"></i> Glossary</a>
+                                <a id="chartdata"
+                                href="https://docs.google.com/spreadsheet/ccc?key=0ArgBv2Jut0VxdDVaYzczVzBpbGdOZWxORFlORzdmN3c&usp=sharing#gid=2"
+                                class="btn btn-primary" target="_blank"><i
+                                class="icon-th-list icon-white"></i> Chart Data</a>
+
+                            </div>
+                            <div class="page-header">
+                                <h1>Resident Household <small>Income Trends</small></h1>
+                            </div>
+                            <p class="muted">
+                                Compare income groups - for example, check out
+                                the gap between the "81st - 90th" and the "91st - 100th"
+                                percentile!
+                            </p>
+                            <div class="alert alert-danger">
+                                <p>
+                                    <strong>Since the 2013 edition of <em>Key Household Income Trends</em>, the Department of Statistics has omitted income figures that exclude employer CPF contributions. Hence, all data after 2012 includes employer CPF contributions.</strong>
+                                </p>
+                            </div>
+                            <div id="dashboard">
+                                <div id="control1"></div>
+                                <div id="control2"></div>
+                                <div id="chart1" class="gviz chart"></div>
+                                <p class="muted">
+                                    <small>Source: <a
+                                        href="http://www.singstat.gov.sg/publications/publications-and-papers/population#household_income_and_expenditure"
+                                        target="_blank">Department of Statistics, Key Household Income Trends 2011-2014.</a> Based on ranking of all resident employed households by their
+                                        monthly household income from work. Figures in Singapore Dollars. </small>
+                                </p>
+                                <div id="chart2" class="gviz chart"></div>
+                                <p class="muted">
+                                    <small>Source: <a
+                                        href="http://www.singstat.gov.sg/publications/publications-and-papers/population#household_income_and_expenditure"
+                                        target="_blank">Department of Statistics, Key Household Income Trends 2011-2014.</a> Based on ranking of all resident employed
+                                        households by their monthly household income from work per household member.
+                                        Figures in Singapore Dollars. </small>
+                                </p>
+                            </div>
+                            <hr />
+                            <h2>Inflation</h2>
+                            <div id="dashboard2">
+                                <p class="muted">
+                                    Compare how income groups fare against inflation, as represented
+                                    by the red line. Zoom
+                                    in to a particular decile or year using the controls below:
+                                </p>
+                                <select id="control-decile" class="inline-top">
+                                    <option value="0">All Deciles</option>
+                                    <option value="3">*1st - 10th Percentile</option>
+                                    <option value="4">11th - 20th Percentile</option>
+                                    <option value="5">21st - 30th Percentile</option>
+                                    <option value="6">31st - 40th Percentile</option>
+                                    <option value="7">41st - 50th Percentile</option>
+                                    <option value="8">51st - 60th Percentile</option>
+                                    <option value="9">61st - 70th Percentile</option>
+                                    <option value="10">71st - 80th Percentile</option>
+                                    <option value="11">81st - 90th Percentile</option>
+                                    <option value="12">91st - 100th Percentile</option>
+                                </select>
+                                <div id="control3"></div>
+                                <div id="control4"></div>
+                                <div id="chart3" class="gviz chart"></div>
+                                <p class="muted">
+                                    <small>Source: <a
+                                        href="http://www.singstat.gov.sg/publications/publications-and-papers/population#household_income_and_expenditure"
+                                        target="_blank">Department of Statistics, Key Household Income Trends 2011-2014.</a> Based on ranking of all resident employed
+                                        households by their monthly household income from work. Figures in Singapore Dollars.</small>
+                                </p>
+                                <div id="chart4" class="gviz chart"></div>
+                                <p class="muted">
+                                    <small>Source: <a
+                                        href="http://www.singstat.gov.sg/publications/publications-and-papers/population#household_income_and_expenditure"
+                                        target="_blank">Department of Statistics, Key Household Income Trends 2011-2014.</a> Based on ranking of all resident employed
+                                        households by their monthly household income from work per household member. Figures in Singapore Dollars.</small>
+                                </p>
+                            </div>
+                            <section id="notes">
+                                <p>
+                                    Notes
+                                </p>
+                                <ol class="essay">
+                                    <li>
+                                        Resident households refer to households headed by
+                                        Singapore citizens or permanent residents. For statistical
+                                        purposes, a household refers to a group of persons living in the
+                                        same dwelling unit and sharing common living arrangements. A
+                                        household may comprise related or unrelated members.
+                                    </li>
+                                    <li>
+                                        There were 1.2 million resident households in 2014. Out of which, there were 1.07 million households with at least one working person (resident employed households). Hence, each income decile has about <strong>107,000</strong> households.
+                                    </li>
+                                    <li>
+                                        The proportion of resident households with at least one
+                                        working person (i.e <em>resident employed households</em>)
+                                        increased from 90 per cent in 2010 to 91 per cent in 2011.
+                                    </li>
+                                    <li>
+                                        Household income from work refers to the sum of income
+                                        received by all working members of the household from employment
+                                        and business but excludes the income of maids.
+                                    </li>
+                                    <li>
+                                        Household income from work per household member refers to
+                                        the household income from work divided by the total number of
+                                        members in the household. For example, if only one person in a
+                                        household of four is working, his income is divided by four to
+                                        derive the average income per household member.
+                                    </li>
+                                </ol>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <footer class="mdl-mini-footer m-top-50">
+                    <div class="mdl-mini-footer__left-section">
+                        <div class="mdl-logo">
+                            Made by Team SGCharts with love. Contact us: admin (at) sgcharts (dot) com.
+                        </div>
+                    </div>
+                </footer>
+            </main>
+        </div>
+        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="/js/spin.min.js"></script>
+        <script src="/js/rats.js"></script>
+        <!-- Required for loading Google Visualization API -->
+        <script src="https://www.google.com/jsapi"></script>
         <script>
-            ( function(d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id))
-                        return;
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
-                    fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));
+            // Loads the Google Visualization libraries
+            google.load('visualization', '1', {
+                'packages' : ['controls']
+            });
+            google.setOnLoadCallback(Rats.Viz.Macro.Household.query);
         </script>
-        <!-- /Javascript SDK for Facebook Like Button HTML5 Plugin -->
-        <div class="navbar">
-            <div class="navbar-inner">
-                <div class="container">
-                    <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-                    <a class="btn btn-navbar" data-toggle="collapse"
-                    data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
-                    <a class="brand" href="index.html">The Great Singapore Rat Race</a>
-                    <div class="nav-collapse collapse">
-                        <ul class="nav">
-                            <li class="dropdown active">
-                                <a class="dropdown-toggle"
-                                data-toggle="dropdown" href="#">Macro <b class="caret"></b> </a>
-                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                                    <li class="nav-header">
-                                        Income Trends
-                                    </li>
-                                    <li>
-                                        <a href="macro.html">Citizens</a>
-                                    </li>
-                                    <li class="active">
-                                        <a href="household.html">Households</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle"
-                                data-toggle="dropdown" href="#">Occupation <b class="caret"></b> </a>
-                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-
-                                    <li class="nav-header">
-                                        Occupation Wages
-                                    </li>
-                                    <li>
-                                        <a href="age.html">Age</a>
-                                    </li>
-                                    <li>
-                                        <a href="industry.html">Industry</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a class="dropdown-toggle"
-                                data-toggle="dropdown" href="#">Graduates <b class="caret"></b> </a>
-                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                                    <li>
-                                        <a href="grad-overview.html">Overview</a>
-                                    </li>
-                                    <li class="nav-header">
-                                        Starting Pay
-                                    </li>
-                                    <li>
-                                        <a href="index.html">Universities</a>
-                                    </li>
-                                    <li>
-                                        <a href="diploma.html">Polytechnics</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="about.html">About</a>
-                            </li>
-                        </ul>
-                        <div id="gplus-button" class="pull-right">
-                            <!-- g-plusone button does not display properly if mixed with other css classes -->
-                            <div class="g-plusone" data-size="medium"
-                            data-href="http://pay.sgcharts.com/"></div>
-                        </div>
-                        <div id="tweet-button" class="pull-right">
-                            <a href="https://twitter.com/share" class="twitter-share-button"
-                            data-url="http://pay.sgcharts.com/"
-                            data-text="Compare pay of jobs in Singapore">Tweet</a>
-                        </div>
-                        <div id="fb-like-button" class="pull-right">
-                            <div class="fb-like" data-href="http://pay.sgcharts.com/"
-                            data-send="false" data-layout="button_count"
-                            data-show-faces="false"></div>
-                        </div>
-                    </div>
-                    <!-- /.nav-collapse -->
-                </div>
-            </div>
-        </div>
-        <!-- /.navbar -->
-        <div class="container-fluid">
-            <div class="row-fluid">
-                <div class="offset1 span10">
-                    <h1 class="inline-top"> Income Trends <small>Resident Households</small></h1>
-                    <div id="infobar" class="pull-right hidden-phone">
-                        <a id="glossary" href="#" class="btn btn-info" rel="popover"><i
-                        class="icon-info-sign icon-white"></i> Glossary</a>
-                        <a id="chartdata"
-                        href="https://docs.google.com/spreadsheet/ccc?key=0ArgBv2Jut0VxdDVaYzczVzBpbGdOZWxORFlORzdmN3c&usp=sharing#gid=2"
-                        class="btn btn-primary" target="_blank"><i
-                        class="icon-th-list icon-white"></i> Chart Data</a>
-
-                    </div>
-                    <p class="muted">
-                        Compare income groups - for example, check out
-                        the gap between the "81st - 90th" and the "91st - 100th"
-                        percentile!
-                    </p>
-                    <div class="alert alert-danger">
-                        <p>
-                            <strong>Since the 2013 edition of <em>Key Household Income Trends</em>, the Department of Statistics has omitted income figures that exclude employer CPF contributions. Hence, all data after 2012 includes employer CPF contributions.</strong>
-                        </p>
-                    </div>
-                    <div id="dashboard">
-                        <div id="control1"></div>
-                        <div id="control2"></div>
-                        <div id="chart1" class="gviz chart"></div>
-                        <p class="muted">
-                            <small>Source: <a
-                                href="http://www.singstat.gov.sg/publications/publications-and-papers/population#household_income_and_expenditure"
-                                target="_blank">Department of Statistics, Key Household Income Trends 2011-2014.</a> Based on ranking of all resident employed households by their
-                                monthly household income from work. Figures in Singapore Dollars. </small>
-                        </p>
-                        <div id="chart2" class="gviz chart"></div>
-                        <p class="muted">
-                            <small>Source: <a
-                                href="http://www.singstat.gov.sg/publications/publications-and-papers/population#household_income_and_expenditure"
-                                target="_blank">Department of Statistics, Key Household Income Trends 2011-2014.</a> Based on ranking of all resident employed
-                                households by their monthly household income from work per household member.
-                                Figures in Singapore Dollars. </small>
-                        </p>
-                    </div>
-                    <hr />
-                    <h2>Inflation</h2>
-                    <div id="dashboard2">
-                        <p class="muted">
-                            Compare how income groups fare against inflation, as represented
-                            by the <span class="label label-important">red line</span>. Zoom
-                            in to a particular decile or year using the controls below:
-                        </p>
-                        <select id="control-decile" class="inline-top">
-                            <option value="0">All Deciles</option>
-                            <option value="3">*1st - 10th Percentile</option>
-                            <option value="4">11th - 20th Percentile</option>
-                            <option value="5">21st - 30th Percentile</option>
-                            <option value="6">31st - 40th Percentile</option>
-                            <option value="7">41st - 50th Percentile</option>
-                            <option value="8">51st - 60th Percentile</option>
-                            <option value="9">61st - 70th Percentile</option>
-                            <option value="10">71st - 80th Percentile</option>
-                            <option value="11">81st - 90th Percentile</option>
-                            <option value="12">91st - 100th Percentile</option>
-                        </select>
-                        <div id="control3"></div>
-                        <div id="control4"></div>
-                        <div id="chart3" class="gviz chart"></div>
-                        <p class="muted">
-                            <small>Source: <a
-                                href="http://www.singstat.gov.sg/publications/publications-and-papers/population#household_income_and_expenditure"
-                                target="_blank">Department of Statistics, Key Household Income Trends 2011-2014.</a> Based on ranking of all resident employed
-                                households by their monthly household income from work. Figures in Singapore Dollars.</small>
-                        </p>
-                        <div id="chart4" class="gviz chart"></div>
-                        <p class="muted">
-                            <small>Source: <a
-                                href="http://www.singstat.gov.sg/publications/publications-and-papers/population#household_income_and_expenditure"
-                                target="_blank">Department of Statistics, Key Household Income Trends 2011-2014.</a> Based on ranking of all resident employed
-                                households by their monthly household income from work per household member. Figures in Singapore Dollars.</small>
-                        </p>
-                    </div>
-                    <section id="notes">
-                        <p>
-                            Notes
-                        </p>
-                        <ol class="essay">
-                            <li>
-                                Resident households refer to households headed by
-                                Singapore citizens or permanent residents. For statistical
-                                purposes, a household refers to a group of persons living in the
-                                same dwelling unit and sharing common living arrangements. A
-                                household may comprise related or unrelated members.
-                            </li>
-                            <li>
-                                There were 1.2 million resident households in 2014. Out of which, there were 1.07 million households with at least one working person (resident employed households). Hence, each income decile has about <strong>107,000</strong> households.
-                            </li>
-                            <li>
-                                The proportion of resident households with at least one
-                                working person (i.e <em>resident employed households</em>)
-                                increased from 90 per cent in 2010 to 91 per cent in 2011.
-                            </li>
-                            <li>
-                                Household income from work refers to the sum of income
-                                received by all working members of the household from employment
-                                and business but excludes the income of maids.
-                            </li>
-                            <li>
-                                Household income from work per household member refers to
-                                the household income from work divided by the total number of
-                                members in the household. For example, if only one person in a
-                                household of four is working, his income is divided by four to
-                                derive the average income per household member.
-                            </li>
-                        </ol>
-                    </section>
-                    <hr class="footer-line" />
-                </div>
-            </div>
-        </div>
-        <!-- /.container-fluid -->
-        <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/rats.js"></script>
-        <script type="text/javascript" src="js/spin.min.js"></script>
-        <script type="text/javascript">
+        <script>
             // Show a spinning load indicator
             // while the page is loading
             var spinner;
@@ -262,9 +225,6 @@
             });
 
             function pageUI() {
-                if (Rats.getUserDevice() <= Rats.Constants.PHONE) {
-                    $(".navbar a.brand").text(Rats.Constants.APP_SHORT_NAME);
-                }
 
                 // Tooltip for chart data link
 
@@ -284,39 +244,5 @@
                 });
             };
         </script>
-        <!-- Required for loading Google Visualization API -->
-        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-        <script type="text/javascript">
-            // Loads the Google Visualization libraries
-            google.load('visualization', '1', {
-                'packages' : ['controls']
-            });
-            google.setOnLoadCallback(Rats.Viz.Macro.Household.query);
-        </script>
-        <!-- BEGIN js for tweet button -->
-        <script>
-            ! function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (!d.getElementById(id)) {
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = "//platform.twitter.com/widgets.js";
-                    fjs.parentNode.insertBefore(js, fjs);
-                }
-            }(document, "script", "twitter-wjs");
-        </script>
-        <!-- END js for tweet button -->
-        <!-- BEGIN js for google +1 button -->
-        <script type="text/javascript">
-            (function() {
-                var po = document.createElement('script');
-                po.type = 'text/javascript';
-                po.async = true;
-                po.src = 'https://apis.google.com/js/plusone.js';
-                var s = document.getElementsByTagName('script')[0];
-                s.parentNode.insertBefore(po, s);
-            })();
-        </script>
-        <!-- END js for google +1 button -->
     </body>
 </html>
