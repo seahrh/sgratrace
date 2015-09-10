@@ -117,7 +117,7 @@ and the dropdown list below it
 
 .gviz.chart {
 	/* now gviz will automatically fill parent's width */
-	height: 30em;
+	height: 400px;
 }
 
 /* IHL Graduate Overview - Page Styles
@@ -129,7 +129,7 @@ and the dropdown list below it
 
 .page-overview #dashboard #chart1,
 .page-overview #dashboard #chart2 {
-	height: 20em;
+	height: 300px;
 }
 
 /* Uni Grad Starting Pay - Page Styles

@@ -83,15 +83,13 @@
                                 <h1>Singapore Citizens <small>Income Trends</small></h1>
                             </div>
                             <p class="muted">
-                                What is the income gap between the bottom 20% and the median?
+                                What is the income gap between the 20th percentile and 50th percentile? (Official data on other percentiles not available)
                             </p>
                             <div id="chart1" class="gviz chart"></div>
                             <div id="chart2" class="gviz chart"></div>
                             <p class="muted">
-                                <small>Source: Manpower Research and Statistical Department, Ministry of Manpower <a
-                                    href="http://mom.gov.sg/statistics-publications/national-labour-market-information/publications/Pages/employment-situation.aspx"
-                                    target="_blank">4th Quarter Report on
-                                    Employment Situation 2012</a>. The annual inflation rate is obtained
+                                <small>Source: Manpower Research and Statistical Department, Ministry of Manpower. 4th Quarter Reports on
+                                    Employment Situation 2012-2014. The annual inflation rate is obtained
                                     from the <a href="http://www.singstat.gov.sg/stats/themes/economy/hist/cpi.html"
                                     target="_blank">Department of Statistics</a>. Figures in Singapore Dollars. </small>
                             </p>
@@ -131,7 +129,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="/js/spin.min.js"></script>
-        <script src="/js/rats.js"></script>
         <!-- Required for loading Google Visualization API -->
         <script src="https://www.google.com/jsapi"></script>
         <script>
@@ -139,8 +136,11 @@
             google.load('visualization', '1', {
                 'packages' : ['controls']
             });
-            google.setOnLoadCallback(Rats.Viz.Macro.Citizen.query);
+            google.setOnLoadCallback(function() {
+                Rats.Viz.Macro.Citizen.query();
+            });
         </script>
+        <script src="/js/rats.js"></script>
         <script>
             // Show a spinning load indicator
             // while the page is loading

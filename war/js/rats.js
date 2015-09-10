@@ -1,3 +1,22 @@
+var DateFormat = new google.visualization.DateFormat({
+    "pattern" : "d MMM yyyy"
+});
+
+var MoneyFormat = new google.visualization.NumberFormat({
+    "prefix" : "$",
+    "pattern" : "#,###"
+});
+
+var IntegerFormat = new google.visualization.NumberFormat({
+    "pattern" : "#,###"
+});
+
+var DecimalFormat = new google.visualization.NumberFormat({
+    "pattern" : "#,###.##"
+});
+var PercentFormat = new google.visualization.NumberFormat({
+    "pattern" : "#.##%"
+});
 // Namespace
 var Rats = {};
 
@@ -94,7 +113,7 @@ Rats.Viz.Occupation.Industry.query = function() {
     // Do not filter by Data Suppressed = No (Column E)
     // because the data can be filtered by wage amount
 
-    query.setQuery("select A, B, C, D, E, F, G, I, E/C " + "label A 'OCCUPATION', B 'SAMPLE SIZE #PERSONS', " + "C '25th Percentile', D 'Median', E '75th Percentile', " + "E/C '75th to 25th Percentile Wage Ratio' " + "format C '$#,###', D '$#,###', E '$#,###', E/C '#.##' ");
+    query.setQuery("select A, B, C, D, E, F, G, I, E/C label A 'OCCUPATION', B 'SAMPLE SIZE #PERSONS', C '25th Percentile', D 'Median', E '75th Percentile', E/C '75th to 25th Percentile Wage Ratio'");
 
     query.send(Rats.Viz.Occupation.Industry.dashboard);
 };
@@ -102,6 +121,11 @@ Rats.Viz.Occupation.Industry.query = function() {
 Rats.Viz.Occupation.Industry.dashboard = function(response) {
     var containerId = "dashboard";
     var data = response.getDataTable();
+    
+    MoneyFormat.format(data, 2);
+    MoneyFormat.format(data, 3);
+    MoneyFormat.format(data, 4);
+    DecimalFormat.format(data, 8);
 
     // Create dashboard
 
@@ -304,7 +328,7 @@ Rats.Viz.Occupation.Age.query = function() {
     // Do not filter by Data Suppressed = No (Column E)
     // because the data can be filtered by wage amount
 
-    query.setQuery("select A, sum(I), min(D), min(B) " + "group by A pivot F " + "label sum(I) '', min(D) ' (Median Monthly Wage $)', A 'Occupation', min(B) ' (Sample Size #persons)' " + "format sum(I) '$#,###', min(D) '$#,###', min(B) '#,###' ");
+    query.setQuery("select A, sum(I), min(D), min(B) group by A pivot F label sum(I) '', min(D) ' (Median Monthly Wage $)', A 'Occupation', min(B) ' (Sample Size #persons)'");
 
     query.send(Rats.Viz.Occupation.Age.dashboard);
 };
@@ -312,7 +336,16 @@ Rats.Viz.Occupation.Age.query = function() {
 Rats.Viz.Occupation.Age.dashboard = function(response) {
     var containerId = "dashboard";
     var data = response.getDataTable();
-
+    
+    MoneyFormat.format(data, 1);
+    MoneyFormat.format(data, 2);
+    MoneyFormat.format(data, 3);
+    MoneyFormat.format(data, 4);
+    MoneyFormat.format(data, 5);
+    MoneyFormat.format(data, 6);
+    MoneyFormat.format(data, 7);
+    MoneyFormat.format(data, 8);
+    
     // Create a dashboard.
     var dashboard = new google.visualization.Dashboard(document.getElementById(containerId));
 
@@ -495,13 +528,16 @@ Rats.Viz.Macro.Citizen.query = function() {
 
     // Group by IHL and Post NS status
     // Pivot by year
-    query.setQuery("select A, D, B, F, E, C, G " + "label D 'Income 20th Percentile', B 'Income Median', F 'Consumer Price Index', E 'Income 20th Percentile (%)', C 'Income Median (%)' " + "format B '$#,###', D '$#,###'");
+    query.setQuery("select A, D, B, F, E, C, G label D '20th Percentile', B '50th Percentile', F 'Consumer Price Index', E '20th Percentile (%)', C '50th Percentile (%)'");
 
     query.send(Rats.Viz.Macro.Citizen.chart);
 };
 
 Rats.Viz.Macro.Citizen.chart = function(response) {
     var data = response.getDataTable();
+    
+    MoneyFormat.format(data, 1);
+    MoneyFormat.format(data, 2);
 
     var chart = new google.visualization.ChartWrapper({
         "containerId" : "chart1",
@@ -512,7 +548,8 @@ Rats.Viz.Macro.Citizen.chart = function(response) {
             "vAxes" : {
                 0 : {
                     "title" : "",
-                    "textPosition" : "in"
+                    "textPosition" : "in",
+                    "format" : "$#,###"
                 },
                 1 : {
                     "title" : "Consumer Price Index (2009=100)",
@@ -616,7 +653,7 @@ Rats.Viz.Macro.Household.query = function() {
 
     // Group by decile
     // Pivot by year
-    query.setQuery("select B, F, sum(C), sum(D) group by B, F pivot A label B 'Decile', F 'Employer CPF Contribution', sum(C) '', sum(D) '' format sum(C) '$#,###', sum(D) '$#,###' ");
+    query.setQuery("select B, F, sum(C), sum(D) group by B, F pivot A label B 'Decile', F 'Employer CPF Contribution', sum(C) '', sum(D) ''");
 
     query.send(Rats.Viz.Macro.Household.dashboard);
 
@@ -624,7 +661,7 @@ Rats.Viz.Macro.Household.query = function() {
 
     // Group by year
     // Pivot by decile
-    query2.setQuery("select A, E, F, sum(C), sum(D) group by A, E, F pivot B label A 'Year', E 'Consumer Price Index', F 'Employer CPF Contribution', sum(C) '', sum(D) '' format sum(C) '$#,###', sum(D) '$#,###' ");
+    query2.setQuery("select A, E, F, sum(C), sum(D) group by A, E, F pivot B label A 'Year', E 'Consumer Price Index', F 'Employer CPF Contribution', sum(C) '', sum(D) ''");
 
     query2.send(Rats.Viz.Macro.Household.inflationDashboard);
 
@@ -639,6 +676,42 @@ Rats.Viz.Macro.Household.dashboard = function(response) {
 
     var containerId = "dashboard";
     var data = response.getDataTable();
+    
+    // Household income
+     
+    MoneyFormat.format(data, 2); // 2000
+    MoneyFormat.format(data, 3); // 2001
+    MoneyFormat.format(data, 4); // 2002
+    MoneyFormat.format(data, 5); // 2003
+    MoneyFormat.format(data, 6); // 2004
+    MoneyFormat.format(data, 7); // 2005
+    MoneyFormat.format(data, 8); // 2006
+    MoneyFormat.format(data, 9); // 2007
+    MoneyFormat.format(data, 10); // 2008
+    MoneyFormat.format(data, 11); // 2009
+    MoneyFormat.format(data, 12); // 2010
+    MoneyFormat.format(data, 13); // 2011
+    MoneyFormat.format(data, 14); // 2012
+    MoneyFormat.format(data, 15); // 2013
+    MoneyFormat.format(data, 16); // 2014
+    
+    // Household income per member
+     
+    MoneyFormat.format(data, 17); // 2000
+    MoneyFormat.format(data, 18); // 2001
+    MoneyFormat.format(data, 19); // 2002
+    MoneyFormat.format(data, 20); // 2003
+    MoneyFormat.format(data, 21); // 2004
+    MoneyFormat.format(data, 22); // 2005
+    MoneyFormat.format(data, 23); // 2006
+    MoneyFormat.format(data, 24); // 2007
+    MoneyFormat.format(data, 25); // 2008
+    MoneyFormat.format(data, 26); // 2009
+    MoneyFormat.format(data, 27); // 2010
+    MoneyFormat.format(data, 28); // 2011
+    MoneyFormat.format(data, 29); // 2012
+    MoneyFormat.format(data, 30); // 2013
+    MoneyFormat.format(data, 31); // 2014
 
     // Create a dashboard.
     var dashboard = new google.visualization.Dashboard(document.getElementById(containerId));
@@ -686,7 +759,8 @@ Rats.Viz.Macro.Household.dashboard = function(response) {
             "title" : "Average Monthly Household Income from Work",
             "vAxis" : {
                 "title" : "",
-                "textPosition" : "in"
+                "textPosition" : "in",
+                "format" : "$#,###"
             },
             "hAxis" : {
                 "title" : "Income Decile",
@@ -727,7 +801,8 @@ Rats.Viz.Macro.Household.dashboard = function(response) {
             "title" : "Average Monthly Household Income from Work Per Household Member",
             "vAxis" : {
                 "title" : "",
-                "textPosition" : "in"
+                "textPosition" : "in",
+                "format" : "$#,###"
             },
             "hAxis" : {
                 "title" : "Income Decile",
@@ -768,6 +843,32 @@ Rats.Viz.Macro.Household.dashboard = function(response) {
 Rats.Viz.Macro.Household.inflationDashboard = function(response) {
     var containerId = "dashboard2";
     var data = response.getDataTable();
+    
+    // Household income
+     
+    MoneyFormat.format(data, 3); // 1st decile
+    MoneyFormat.format(data, 4); // 2nd decile
+    MoneyFormat.format(data, 5); // 3rd decile
+    MoneyFormat.format(data, 6); // 4th decile
+    MoneyFormat.format(data, 7); // 5th decile
+    MoneyFormat.format(data, 8); // 6th decile
+    MoneyFormat.format(data, 9); // 7th decile
+    MoneyFormat.format(data, 10); // 8th decile
+    MoneyFormat.format(data, 11); // 9th decile
+    MoneyFormat.format(data, 12); // 10th decile
+    
+    // Household income per member
+    
+    MoneyFormat.format(data, 13); // 1st decile
+    MoneyFormat.format(data, 14); // 2nd decile
+    MoneyFormat.format(data, 15); // 3rd decile
+    MoneyFormat.format(data, 16); // 4th decile
+    MoneyFormat.format(data, 17); // 5th decile
+    MoneyFormat.format(data, 18); // 6th decile
+    MoneyFormat.format(data, 19); // 7th decile
+    MoneyFormat.format(data, 20); // 8th decile
+    MoneyFormat.format(data, 21); // 9th decile
+    MoneyFormat.format(data, 22); // 10th decile
 
     // Create a dashboard.
     var dashboard = new google.visualization.Dashboard(document.getElementById(containerId));
@@ -821,7 +922,8 @@ Rats.Viz.Macro.Household.inflationDashboard = function(response) {
             "vAxes" : {
                 0 : {
                     "title" : "",
-                    "textPosition" : "in"
+                    "textPosition" : "in",
+                    "format" : "$#,###"
                 },
                 1 : {
                     "title" : "Consumer Price Index (2009=100)",
@@ -885,7 +987,8 @@ Rats.Viz.Macro.Household.inflationDashboard = function(response) {
             "vAxes" : {
                 0 : {
                     "title" : "Average Monthly Income Per Household Member (S$)",
-                    "textPosition" : "in"
+                    "textPosition" : "in",
+                    "format" : "$#,###"
                 },
                 1 : {
                     "title" : "Consumer Price Index (2009=100)",
@@ -994,7 +1097,7 @@ Rats.Viz.GraduateEmploymentSurvey.Overview.query = function() {
 
     // Group by IHL and Post NS status
     // Pivot by year
-    query.setQuery("select H, sum(D), sum(E) group by H pivot A " + "label sum(D) '', sum(E) '' " + "format sum(D) '$#,###', sum(E) '##.#%' ");
+    query.setQuery("select H, sum(D), sum(E) group by H pivot A label sum(D) '', sum(E) ''");
 
     query.send(Rats.Viz.GraduateEmploymentSurvey.Overview.dashboard);
 };
@@ -1002,7 +1105,25 @@ Rats.Viz.GraduateEmploymentSurvey.Overview.query = function() {
 Rats.Viz.GraduateEmploymentSurvey.Overview.dashboard = function(response) {
     var containerId = "dashboard";
     var data = response.getDataTable();
-
+    
+    // Starting salary
+    
+    MoneyFormat.format(data, 1); // 2007
+    MoneyFormat.format(data, 2); // 2008
+    MoneyFormat.format(data, 3); // 2009
+    MoneyFormat.format(data, 4); // 2010
+    MoneyFormat.format(data, 5); // 2011
+    MoneyFormat.format(data, 6); // 2012
+    
+    // Employment rate
+    
+    PercentFormat.format(data, 7); // 2007
+    PercentFormat.format(data, 8); // 2008
+    PercentFormat.format(data, 9); // 2009
+    PercentFormat.format(data, 10); // 2010
+    PercentFormat.format(data, 11); // 2011
+    PercentFormat.format(data, 12); // 2012
+    
     // Create a dashboard.
     var dashboard = new google.visualization.Dashboard(document.getElementById(containerId));
 
@@ -1032,7 +1153,8 @@ Rats.Viz.GraduateEmploymentSurvey.Overview.dashboard = function(response) {
                 "textPosition" : "in",
                 "textStyle" : {
                     "fontSize" : 14
-                }
+                },
+                "format" : "$#,###"
             },
             "legend" : {
                 "position" : "top",
@@ -1069,7 +1191,8 @@ Rats.Viz.GraduateEmploymentSurvey.Overview.dashboard = function(response) {
                 "textPosition" : "in",
                 "textStyle" : {
                     "fontSize" : 14
-                }
+                },
+                "format" : "#.#%"
             },
             "legend" : {
                 "position" : "top",
@@ -1107,7 +1230,7 @@ Rats.Viz.GraduateEmploymentSurvey.Qualification = {
 Rats.Viz.GraduateEmploymentSurvey.Qualification.query = function() {
     var query = new google.visualization.Query(Rats.Viz.GraduateEmploymentSurvey.Qualification.dataSourceUrl);
 
-    query.setQuery("select L, A, H, B, I, C, F, E, G where J = 'No' " + "order by I, C " + "label C 'Employment Rate', F '25th Percentile', E 'Median', G '75th Percentile' " + "format F '$#,###', E '$#,###', G '$#,###', C '##.#%'");
+    query.setQuery("select L, A, H, B, I, C, F, E, G where J = 'No' order by I, C label C 'Employment Rate', F '25th Percentile', E '50th Percentile', G '75th Percentile'");
 
     query.send(Rats.Viz.GraduateEmploymentSurvey.Qualification.dashboard);
 };
@@ -1115,6 +1238,11 @@ Rats.Viz.GraduateEmploymentSurvey.Qualification.query = function() {
 Rats.Viz.GraduateEmploymentSurvey.Qualification.dashboard = function(response) {
     var containerId = "dashboard";
     var data = response.getDataTable();
+    
+    PercentFormat.format(data, 5); // employment rate
+    MoneyFormat.format(data, 6); // P25 income
+    MoneyFormat.format(data, 7); // P50 income
+    MoneyFormat.format(data, 8); // P75 income
 
     // Create a dashboard.
     var dashboard = new google.visualization.Dashboard(document.getElementById(containerId));
@@ -1366,7 +1494,7 @@ Rats.Viz.GraduateEmploymentSurvey.Diploma.query = function() {
     // Sort by course category
     // to maintain bubble color consistency
 
-    query.setQuery("select A, B, C, D/100, E, F, G, H where I = 'No' " + "order by G " + "label D/100 'Employment Rate', E 'Median Salary' " + "format E '$#,###', D/100 '##.#%', B '#,###' ");
+    query.setQuery("select A, B, C, D/100, E, F, G, H where I = 'No' order by G label D/100 'Employment Rate', E 'Median Salary'");
 
     query.send(Rats.Viz.GraduateEmploymentSurvey.Diploma.dashboard);
 };
@@ -1374,6 +1502,9 @@ Rats.Viz.GraduateEmploymentSurvey.Diploma.query = function() {
 Rats.Viz.GraduateEmploymentSurvey.Diploma.dashboard = function(response) {
     var containerId = "dashboard";
     var data = response.getDataTable();
+     
+    MoneyFormat.format(data, 4); // median salary
+    PercentFormat.format(data, 3); // employment rate
 
     // Create a dashboard.
     var dashboard = new google.visualization.Dashboard(document.getElementById(containerId));
@@ -1477,11 +1608,12 @@ Rats.Viz.GraduateEmploymentSurvey.Diploma.dashboard = function(response) {
                     "fontSize" : 16
                 },
                 "gridlines" : {
-                    "count" : 9
+                    "count" : 12
                 },
                 // min and max gridlines to minimize cropping
-                "minValue" : .3,
-                "maxValue" : 1.1
+                "minValue" : 0,
+                "maxValue" : 1.1,
+                "format" : "#%"
             },
             "vAxis" : {
                 "title" : "",
