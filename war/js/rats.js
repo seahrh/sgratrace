@@ -1224,7 +1224,7 @@ Rats.Viz.GraduateEmploymentSurvey.Overview.dashboard = function(response) {
 };
 
 Rats.Viz.GraduateEmploymentSurvey.Qualification = {
-    dataSourceUrl : "https://docs.google.com/spreadsheet/pub?key=0ArgBv2Jut0VxdERtWEU4UE5BbFd2TnZzVW8yTlB5eFE&headers=1&gid=0"
+    dataSourceUrl : "https://docs.google.com/spreadsheets/d/1eeKc0GoccpCrnHE0-UKeoP298fef1mCkbvoUNSw-sOo/edit?usp=sharing&headers=1&gid=0"
 };
 
 Rats.Viz.GraduateEmploymentSurvey.Qualification.query = function() {
@@ -1281,7 +1281,7 @@ Rats.Viz.GraduateEmploymentSurvey.Qualification.dashboard = function(response) {
             }
         },
         'state' : {
-            'selectedValues' : ['2013']
+            'selectedValues' : ['2014']
         }
     });
 
