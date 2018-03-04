@@ -1281,7 +1281,7 @@ Rats.Viz.GraduateEmploymentSurvey.Qualification.dashboard = function(response) {
             }
         },
         'state' : {
-            'selectedValues' : ['2014']
+            'selectedValues' : ['2015']
         }
     });
 
@@ -1297,7 +1297,7 @@ Rats.Viz.GraduateEmploymentSurvey.Qualification.dashboard = function(response) {
                 'allowTyping' : false,
                 'allowMultiple' : true,
                 'selectedValuesLayout' : 'aside',
-                'caption' : 'Institution of Higher Learning'
+                'caption' : 'University'
             }
         }
     });
@@ -1324,7 +1324,7 @@ Rats.Viz.GraduateEmploymentSurvey.Qualification.dashboard = function(response) {
         "chartType" : "ComboChart",
 
         "options" : {
-            "title" : "Monthly Gross Starting Salary and Employment Rate of University Graduates",
+            "title" : "Monthly Gross Starting Salary, Full-Time Permanent Employment Rate of University Graduates",
             "vAxes" : {
                 0 : {
                     "title" : "",
@@ -1394,7 +1394,7 @@ Rats.Viz.GraduateEmploymentSurvey.Qualification.dashboard = function(response) {
         "chartType" : "BubbleChart",
         "containerId" : "chart1",
         "options" : {
-            "title" : "Median Monthly Gross Starting Salary and Employment Rate of University Graduates",
+            "title" : "Median Monthly Gross Starting Salary, Full-Time Permanent Employment Rate of University Graduates",
             "titlePosition" : "out",
             "axisTitlesPosition" : "out",
             "legend" : {
@@ -1416,11 +1416,11 @@ Rats.Viz.GraduateEmploymentSurvey.Qualification.dashboard = function(response) {
                     "fontSize" : 16
                 },
                 "gridlines" : {
-                    "count" : 12
+                    "count" : 3
                 },
                 // min and max gridlines to minimize cropping
-                "minValue" : .5,
-                "maxValue" : 1.05
+                //"minValue" : .25,
+                "maxValue" : 1.01
             },
             "vAxis" : {
                 "title" : "",
@@ -1428,9 +1428,12 @@ Rats.Viz.GraduateEmploymentSurvey.Qualification.dashboard = function(response) {
                 "textStyle" : {
                     "fontSize" : 16
                 },
+                "gridlines" : {
+                    "count" : 3
+                },
                 // min 1600 to prevent low pay bubbles from cropping
                 // max 2600 to prevent post NS bubbles from cropping
-                "minValue" : 2000,
+                //"minValue" : 2000,
                 "maxValue" : 6000
             },
             "sizeAxis" : {
