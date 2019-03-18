@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <!-- Facebook Open Graph tags -->
         <meta property="og:title" content="The Great Singapore Rat Race" />
@@ -22,7 +22,7 @@
         <link href="https://pay.sgcharts.com" rel="canonical">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.pink-green.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <link rel="stylesheet" href="styles/rats.css">
         <script src="/js/ga.js"></script>
     </head>
@@ -73,7 +73,7 @@
             <main class="mdl-layout__content relative">
                 <div class="page-content container-fluid">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
+                        <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2">
                             <div class="ad">
                                 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                                 <!-- sgratrace__index__default__top -->
@@ -85,18 +85,24 @@
                                 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
                             </div>
                         </div>
-                        <div class="col-xs-12">
-                            <div id="infobar" class="hidden-xs">
+                    </div><!-- ./row -->
+                    <div class="row justify-content-end">
+                        <div class="d-none d-sm-block col-sm-6">
+                            <div id="infobar">
                                 <a  id="smu"
-                                href="#"
-                                class="btn btn-danger" rel="popover" target="_blank"><i
-                                class="icon-comment icon-white"></i> SMU Top Earner?</a>
+                                    href="#"
+                                    class="btn btn-danger" rel="popover" target="_blank"><i
+                                        class="icon-comment icon-white"></i> SMU Top Earner?</a>
                                 <a id="glossary" href="#" class="btn" rel="popover"><i
-                                class="icon-info-sign"></i> Glossary</a>
+                                        class="icon-info-sign"></i> Glossary</a>
                                 <a  id="chartdata"
-                                href="https://docs.google.com/spreadsheets/d/1eeKc0GoccpCrnHE0-UKeoP298fef1mCkbvoUNSw-sOo/edit?usp=sharing"
-                                class="btn" target="_blank"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Chart Data</a>
+                                    href="https://docs.google.com/spreadsheets/d/1eeKc0GoccpCrnHE0-UKeoP298fef1mCkbvoUNSw-sOo/edit?usp=sharing"
+                                    class="btn" target="_blank"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Chart Data</a>
                             </div>
+                        </div>
+                    </div><!-- ./row -->
+                    <div class="row">
+                        <div class="col">
                             <div class="page-header">
                                 <h1>University Graduates <small>Starting Salary By Degree</small></h1>
                             </div>
@@ -124,7 +130,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div><!-- ./container-fluid -->
                 <footer class="mdl-mini-footer m-top-50">
                     <div class="mdl-mini-footer__left-section">
                         <div class="mdl-logo">
@@ -136,8 +142,9 @@
         </div>
         <!-- Below the fold -->
         <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
         <script src="/js/spin.min.js"></script>
         <!-- Required for loading Google Visualization API -->
         <script src="https://www.google.com/jsapi"></script>
