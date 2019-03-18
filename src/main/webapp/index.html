@@ -22,7 +22,7 @@
         <link href="https://pay.sgcharts.com" rel="canonical">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.pink-green.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="styles/rats.css">
         <script src="/js/ga.js"></script>
     </head>
@@ -86,31 +86,22 @@
                             </div>
                         </div>
                     </div><!-- ./row -->
-                    <div class="row justify-content-end">
-                        <div class="d-none d-sm-block col-sm-6">
-                            <div id="infobar">
-                                <a  id="smu"
-                                    href="#"
-                                    class="btn btn-danger" rel="popover" target="_blank"><i
-                                        class="icon-comment icon-white"></i> SMU Top Earner?</a>
-                                <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
-                                <a id="glossary" href="#" class="btn" rel="popover"><i
-                                        class="icon-info-sign"></i> Glossary</a>
-                            </div>
-                        </div>
-                    </div><!-- ./row -->
                     <div class="row">
                         <div class="col">
                             <div class="page-header">
                                 <h1>University Graduates <small>Starting Salary By Degree</small></h1>
                             </div>
                             <p>
-                                Compare starting salary across degrees, faculties and universities in Singapore. Source: <a
+                                Compare the full-time permanent employment rate and gross monthly salary. Source: <a
                                         href="https://www.moe.gov.sg/education/post-secondary"
                                         target="_blank">Graduate Employment
                                 Survey, Ministry of Education</a>.
                             </p>
                             <ul>
+                                <li><strong>Full-time Permanent Employment</strong> refers to employment of at least 35 hours a week and where the employment is not temporary. It includes those on contracts of one year or more.
+                                </li>
+                                <li><strong>Gross Monthly Salary</strong> pertains only to full-time permanently employed graduates. It comprises basic salary, overtime payments, commissions, fixed allowances and other regular cash payments, before deductions of the employee’s CPF contributions and personal income tax. Employer’s CPF contributions, bonuses, stock options, lump sum payments, and payments-in-kind are excluded.
+                                </li>
                                 <li>Universities include the National
                                     University of Singapore (NUS), Nanyang Technological University
                                     (NTU), Singapore Management University (SMU), Singapore Institute of Technology (SIT), Singapore University of Technology and Design (SUTD) and Singapore University of Social Sciences (SUSS).
@@ -152,8 +143,7 @@
         <!-- Below the fold -->
         <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="/js/spin.min.js"></script>
         <!-- Required for loading Google Visualization API -->
         <script src="https://www.google.com/jsapi"></script>
@@ -225,26 +215,6 @@
                     html : false,
                     trigger : "hover",
                     selector : ".charts-menu-button"
-                });
-
-                // Popover for SMU info
-
-                $("#infobar #smu").popover({
-                    "title" : "Really? Not quite, it's marketing",
-                    "placement" : "bottom",
-                    "html" : true,
-                    "trigger" : "hover",
-                    "content" : "<p>SMU courses are displayed in two categories:</p>" + "<ol>" + "<li>Overall results for <strong>all</strong> graduates within the course regardless of the award they attained;</li>" + "<li>Results for graduates awarded Cum Laude and above (GPA 3.4 and above; maximum 4.0) - <span class='text-warning'><strong>NUS and NTU do not use this format to report the performance of their top graduates.</strong></span></li>" + "</ol>"
-                });
-
-                // Popover for glossary
-
-                $("#infobar #glossary").popover({
-                    "title" : "What do the terms mean?",
-                    "placement" : "bottom",
-                    "html" : true,
-                    "trigger" : "hover",
-                    "content" : "<ol> " + "<li>The <strong>gross monthly salary</strong> comprises the basic salary, fixed allowances, over-time pay and commissions. Employer's contributions, bonuses, stock options, other lump sum payments and payments-in-kind are excluded.</li>" + "<li>The <strong><span class='badge badge-success'>green line</span></strong> represents the employment rate, which is the proportion of economically active graduates who were employed on a <strong>full-time permanent</strong> basis within 6 months after completing their final examinations.</li>" + "</ol>"
                 });
 
                 // Tooltip for table chart
