@@ -21,15 +21,15 @@ detailed instructions.
 ## Maven
 ### Running locally
 
-    mvn appengine:devserver
+    mvn appengine:run
 
 ### Deploying
 
-    mvn appengine:update
+    mvn appengine:deploy
 
 ## Testing
 
-    mvn verify
+    mvn test
 
 As you add / modify the source code (`src/main/java/...`) it's very useful to add
 [unit testing](https://cloud.google.com/appengine/docs/java/tools/localunittesting)
