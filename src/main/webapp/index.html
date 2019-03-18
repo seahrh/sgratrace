@@ -93,11 +93,9 @@
                                     href="#"
                                     class="btn btn-danger" rel="popover" target="_blank"><i
                                         class="icon-comment icon-white"></i> SMU Top Earner?</a>
+                                <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
                                 <a id="glossary" href="#" class="btn" rel="popover"><i
                                         class="icon-info-sign"></i> Glossary</a>
-                                <a  id="chartdata"
-                                    href="https://docs.google.com/spreadsheets/d/1eeKc0GoccpCrnHE0-UKeoP298fef1mCkbvoUNSw-sOo/edit?usp=sharing"
-                                    class="btn" target="_blank"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Chart Data</a>
                             </div>
                         </div>
                     </div><!-- ./row -->
@@ -106,14 +104,25 @@
                             <div class="page-header">
                                 <h1>University Graduates <small>Starting Salary By Degree</small></h1>
                             </div>
-                            <p class="muted">
+                            <p>
                                 Compare starting salary across degrees, faculties and universities in Singapore. Source: <a
                                         href="https://www.moe.gov.sg/education/post-secondary"
                                         target="_blank">Graduate Employment
-                                Survey, Ministry of Education</a>. Universities include the National
-                                    University of Singapore (NUS), Nanyang Technological University
-                                (NTU), Singapore Management University (SMU), Singapore Institute of Technology (SIT), Singapore University of Technology and Design (SUTD) and Singapore University of Social Sciences (SUSS). Results for NUS, NTU, SMU and SUSS are updated in February, SUTD in March and SIT in October. Get past-year survey results since 2009 <a href="https://drive.google.com/drive/folders/0B7gBv2Jut0VxYVR0bXVtNEkzQWM?usp=sharing" target="_blank">[Google Drive]</a>.
+                                Survey, Ministry of Education</a>.
                             </p>
+                            <ul>
+                                <li>Universities include the National
+                                    University of Singapore (NUS), Nanyang Technological University
+                                    (NTU), Singapore Management University (SMU), Singapore Institute of Technology (SIT), Singapore University of Technology and Design (SUTD) and Singapore University of Social Sciences (SUSS).
+                                </li>
+                                <li>Results for NUS, NTU, SMU and SUSS are updated in February, SUTD in March and SIT in October.
+                                </li>
+                                <li>Get past-year survey results since 2009 <a href="https://drive.google.com/drive/folders/0B7gBv2Jut0VxYVR0bXVtNEkzQWM?usp=sharing" target="_blank">[Google Drive]</a>
+                                </li>
+                                <li>
+                                    Chart data <a href="https://docs.google.com/spreadsheets/d/1eeKc0GoccpCrnHE0-UKeoP298fef1mCkbvoUNSw-sOo/edit?usp=sharing" target="_blank">[Google Sheet]</a>
+                                </li>
+                            </ul>
                             <div id="dashboard">
                                 <div class="well">
                                     <div id="control1"></div>
@@ -243,15 +252,6 @@
                 $("#chart3").tooltip({
                     "title" : "Click on the column headers to sort the data",
                     "placement" : "top",
-                    "html" : false,
-                    "trigger" : "hover"
-                });
-
-                // Tooltip for chart data link
-
-                $("#infobar #chartdata").tooltip({
-                    "title" : "Grab the chart data!",
-                    "placement" : "bottom",
                     "html" : false,
                     "trigger" : "hover"
                 });
