@@ -140,8 +140,11 @@ and the dropdown list below it
 
 .page-degree #dashboard #control2,
 .page-degree #dashboard #control3,
-.page-degree #dashboard #control4 {
-	margin: 1em 0 0 0;
+.page-degree #dashboard #control4,
+.page-degree #dashboard #chart1,
+.page-degree #dashboard #chart2,
+.page-degree #dashboard #chart3 {
+	margin: 20px 0 0 0;
 }
 
 /* Diploma Grad Starting Pay - Page Styles
