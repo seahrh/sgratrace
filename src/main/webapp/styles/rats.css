@@ -4,6 +4,11 @@
 .relative {
 	position: relative;
 }
+.page-header {
+    padding-bottom: 9px;
+    margin: 30px 0 20px;
+    border-bottom: 1px solid #eee;
+}
 .divider-x {
 	height: 1px;
 	margin: 8px 0;
