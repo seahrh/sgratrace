@@ -97,7 +97,7 @@ hr.footer-line {
 ********************************************************/
 
 .charts-menu-vertical {
-	max-height: 200px;
+	max-height: 300px;
 	overflow-y: auto;
 	z-index: 15;
 }
@@ -108,7 +108,7 @@ including input field and dropdown button
 */
 
 .gviz.control-occupation .charts-combobox {
-	width: 50em;
+	width: 100%;
 }
 
 /*
@@ -118,7 +118,7 @@ and the dropdown list below it
 
 .gviz.control-occupation .charts-combobox .charts-menu,
 .gviz.control-occupation .charts-combobox.charts-inline-block > input {
-	width: 48em;
+	width: 90%;
 }
 
 /* Default chart size */
@@ -207,17 +207,19 @@ and the dropdown list below it
 
 /* Occupation Wages by Age - Page Styles
 ********************************************************/
-.page-age #dashboard #control1 {
-	margin: 0 0 1em 0;
+.page-age #dashboard #control-clearall {
+    margin: 20px 0 0 0;
 }
-
 .page-age #dashboard #control2,
 .page-age #dashboard #control3, 
 .page-age #dashboard #control4,
 .page-age #dashboard #control5 {
-	margin: 1em 1em 0 0;
+	margin: 20px 20px 0 0;
 }
-
+.page-age #dashboard #chart1,
+.page-age #dashboard #chart2 {
+    margin: 20px 0 0 0;
+}
 
 
 /* Occupation Wages by Industry - Page Styles
@@ -246,21 +248,7 @@ and the dropdown list below it
 /* Tablet
 ********************************************************/
 
-@media ( max-width : 979px) {
-	.charts-menu-vertical {
-		max-height: 15em;
-	}
 
-	.gviz.control-occupation .charts-combobox {
-		width: 40em;
-	}
-
-	.gviz.control-occupation .charts-combobox .charts-menu,
-	.gviz.control-occupation .charts-combobox.charts-inline-block>input {
-		width: 38em;
-	}
-	
-}
 
 /* Regular Desktops
 ********************************************************/

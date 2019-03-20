@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!-- BEGIN Facebook Open Graph tags -->
     <meta property="og:title" content="The Great Singapore Rat Race"/>
@@ -22,7 +22,7 @@
     <link href="https://pay.sgcharts.com/age.html" rel="canonical">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.pink-green.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/rats.css">
     <script src="/js/ga.js"></script>
 </head>
@@ -74,7 +74,7 @@
     <main class="mdl-layout__content relative">
         <div class="page-content container-fluid">
             <div class="row">
-                <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
+                <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2">
                     <div class="ad">
                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                         <!-- sgratrace__age__default__top -->
@@ -88,49 +88,53 @@
                         </script>
                     </div>
                 </div>
-                <div class="col-xs-12">
-                    <div id="infobar" class="hidden-xs">
-                        <a id="chartguide" href="#" class="btn btn-danger" rel="popover"><i
-                                class="icon-question-sign icon-white"></i> Zero Wages?</a><a
-                            id="glossary"
-                            href="#" class="btn" rel="popover"><i
-                            class="icon-info-sign"></i> Glossary</a><a id="chartdata"
-                                                                       href="https://docs.google.com/spreadsheet/ccc?key=0ArgBv2Jut0VxdHprczZyVzh6VWctLVVTSWNXcWRoaHc&usp=sharing#gid=3"
-                                                                       class="btn" target="_blank"><i
-                            class="icon-th-list"></i> Chart Data</a>
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col">
                     <div class="page-header">
                         <h1>Occupation Wages
                             <small>By Age</small>
                         </h1>
                     </div>
-                    <p class="muted">
+                    <p>
                         What are the pay prospects of your occupation? At what age
                         will you reach your income peak? Planning a
                         mid-career change? Find out more in the charts below!
                     </p>
+                    <p class="text-muted">
+                        Source: Manpower Research and Statistical Department, Ministry of Manpower <a
+                                href="https://www.mom.gov.sg/newsroom/press-releases/2012/report-on-wages-in-singapore-2011-and-singapore-yearbook-of-manpower-statistics-2012"
+                                target="_blank">Report on Wages 2011</a>,
+                            Table 1.4. Figures in Singapore Dollars.
+                    </p>
+                    <ul>
+                        <li><strong>Monthly Gross Wage</strong> refers to the sum of the basic wage, overtime payments, commissions, allowances, and other regular cash payments before deduction of employee CPF contributions and personal income tax. However, it excludes employer CPF contributions, bonuses, stock options, other lump sum payments and payments-in-kind.
+                        </li>
+                        <li><strong>Median (50th Percentile)</strong> refers to the wage level at the middle of the income distribution which divides the bottom half of wage earners from the upper half.
+                        </li>
+                        <li>
+                            Data is suppressed for certain occupations or age groups if the number of observations is too small to be statistically representative. For such cases, the chart shows zero ($0) wage and the table shows a blank cell.
+                        </li>
+                        <li>Chart data <a href="https://docs.google.com/spreadsheet/ccc?key=0ArgBv2Jut0VxdHprczZyVzh6VWctLVVTSWNXcWRoaHc&usp=sharing#gid=3" target="_blank">[Google Sheet]</a>
+                        </li>
+                    </ul>
                     <div id="dashboard">
-                        <div class="well">
-                            <div>
-                                <div id="control1" class="gviz control-occupation"></div>
-                                <button id="control-clearall" class="btn btn-small btn-primary"
-                                        type="button">
-                                    Clear Selection
-                                </button>
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <div>
+                                    <div id="control1" class="gviz control-occupation"></div>
+                                    <button id="control-clearall" class="btn btn-small btn-primary"
+                                            type="button">
+                                        Clear Selection
+                                    </button>
+                                </div>
+                                <div id="control2" class="inline-top"></div>
+                                <div id="control3" class="inline-top"></div>
+                                <div id="control4" class="inline-top"></div>
+                                <div id="control5" class="inline-top"></div>
                             </div>
-                            <div id="control2" class="inline-top"></div>
-                            <div id="control3" class="inline-top"></div>
-                            <div id="control4" class="inline-top"></div>
-                            <div id="control5" class="inline-top"></div>
                         </div>
                         <div id="chart1" class="gviz chart"></div>
-                        <p class="muted">
-                            <small>Source: Manpower Research and Statistical Department, Ministry of Manpower <a
-                                    href="http://www.mom.gov.sg/statistics-publications/national-labour-market-information/publications/Pages/report-wages.aspx"
-                                    target="_blank">Report on Wages 2011</a>,
-                                Table 1.4. Figures in Singapore Dollars.
-                            </small>
-                        </p>
                         <div id="chart2"></div>
                     </div>
                 </div>
@@ -147,8 +151,9 @@
 </div>
 <!-- Below the fold -->
 <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="/js/spin.min.js"></script>
 <!-- Required for loading Google Visualization API -->
 <script src="https://www.google.com/jsapi"></script>
@@ -180,7 +185,7 @@
 
             });
 
-            $(window).load(function() {
+            $(window).on("load", function() {
                 // Once the page is fully loaded, stop spinning
                 Rats.UI.LoadAnimation.stop(spinner);
             });
@@ -242,41 +247,7 @@
                     "trigger" : "hover"
                 })
 
-                // Tooltip for chart data link
-
-                $("#infobar #chartdata").tooltip({
-                    title : "Grab the chart data!",
-                    placement : "bottom",
-                    html : false,
-                    trigger : "hover"
-                });
-
-                // Popover for glossary
-
-                $("#infobar #glossary").popover({
-                    title : "What do the terms mean?",
-                    placement : "bottom",
-                    html : true,
-                    trigger : "hover",
-                    content : "<ol><li><strong>Monthly Gross Wage</strong> refers to the sum of the basic wage, overtime payments, " + "commissions, allowances, and other regular cash payments before deduction of employee CPF contributions " + "and personal income tax. However, it excludes employer CPF contributions, bonuses, stock options, " + "other lump sum payments and payments-in-kind.</li><li><strong>Median (50th percentile)</strong> refers " + "to the wage level at the middle of the income distribution which divides the bottom half of wage earners " + "from the upper half.</li></ol>"
-                });
-
-                // Popover for chart guide
-
-                $("#infobar #chartguide").popover({
-                    title : "Why are there missing/zero wages?",
-                    placement : "bottom",
-                    html : true,
-                    trigger : "hover",
-                    content : "Data is suppressed for certain occupations or age groups if the number of observations is too small to be statistically representative. " + "For such cases, the chart shows zero ($0) wage and the table shows a blank cell."
-                });
-
             };
-
-
-
-
-
 </script>
 </body>
 </html>
