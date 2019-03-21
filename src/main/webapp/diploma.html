@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <!-- BEGIN Facebook Open Graph tags -->
     <meta property="og:title" content="The Great Singapore Rat Race"/>
@@ -23,7 +23,7 @@
     <link href="https://pay.sgcharts.com/diploma.html" rel="canonical">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.pink-green.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/rats.css">
     <script src="/js/ga.js"></script>
 </head>
@@ -75,7 +75,7 @@
     <main class="mdl-layout__content relative">
         <div class="page-content container-fluid">
             <div class="row">
-                <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
+                <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2">
                     <div class="ad">
                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                         <!-- sgratrace__diploma__default__top -->
@@ -87,49 +87,53 @@
                         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
                     </div>
                 </div>
-                <div class="col-xs-12">
-                    <div id="infobar" class="hidden-xs">
-                        <a id="chartguide"
-                           href="#"
-                           class="btn btn-info" rel="popover"><i
-                                class="icon-picture icon-white"></i> Chart Guide</a>
-                        <a id="help" href="#" class="btn btn-info" rel="popover"><i
-                                class="icon-info-sign icon-white"></i> Information</a>
-
-                        <a id="chartdata"
-                           href="https://docs.google.com/spreadsheet/ccc?key=0ArgBv2Jut0VxdFU0OEMzbmR4Z0ZMQnJjU0EwTnViQnc&usp=sharing#gid=1"
-                           class="btn btn-primary" target="_blank"><i
-                                class="icon-th-list icon-white"></i> Chart Data</a>
-                    </div>
+            </div>
+            <div class="row">
+                <div class="col">
                     <div class="page-header">
                         <h1>Polytechnic Graduates
                             <small>Starting Salary By Diploma</small>
                         </h1>
                     </div>
-                    <p class="muted">
-                        What is the starting pay range of your diploma?
-                        Which diploma offers the best pay? Find out more in the charts below!
+                    <ul>
+                        <li><strong>Full‐Time Permanent Employment</strong> refers to employment of at least 35 hours a week and where the employment is not temporary. It includes those on contracts of one year or more.</li>
+                        <li>
+                            <strong>Gross Monthly Salary</strong> comprises basic salary, fixed allowances, over‐time pay, commissions, and other regular cash payments, before deduction of the employee’s CPF contributions and personal income tax. Employer’s CPF contributions, bonuses, stock options, other lump sum payments and payments‐in‐kind are excluded.
+                        </li>
+                        <li>
+                            The charts are based on <em>preliminary data</em> from the Ministry of Manpower (MOM) Report on Wages. The actual data, breakdown by diploma level, is published in MOM's Yearbook of Statistics.
+                        </li>
+                        <li>
+                            Chart data <a href="https://docs.google.com/spreadsheet/ccc?key=0ArgBv2Jut0VxdFU0OEMzbmR4Z0ZMQnJjU0EwTnViQnc&usp=sharing#gid=1" target="_blank">[Google Sheet]</a>
+                        </li>
+                    </ul>
+                    <p class="text-muted">
+                        <small>Source: Ministry of Education, <a
+                                href="//polyges.sg"
+                                target="_blank">Polytechnic Graduate Employment Survey</a>, 2008 - 2013.
+                            Polytechnics include the Nanyang Polytechnic (NYP), Ngee Ann Polytechnic (NP),
+                            Republic Polytechnic (RP), Singapore Polytechnic (SP) and Temasek
+                            Polytechnic (TP). Figures in Singapore Dollars.</small>
                     </p>
                     <div id="dashboard">
-                        <div class="well">
-                            <div id="control1"></div>
-                            <div id="control2"></div>
-                            <div id="control3"></div>
-                            <div id="control4"></div>
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <div id="control1"></div>
+                                <div id="control2"></div>
+                                <div id="control3"></div>
+                                <div id="control4"></div>
+                            </div>
                         </div>
-
-                        <div id="chart1" class="gviz chart hidden-phone"></div>
-
-                        <p class="muted">
-                            <small>Source: Ministry of Education, <a
-                                    href="//polyges.sg"
-                                    target="_blank">Polytechnic Graduate Employment Survey</a>, 2008 - 2013.
-                                Polytechnics
-                                refer to Nanyang Polytechnic (NYP), Ngee Ann Polytechnic (NP),
-                                Republic Polytechnic (RP), Singapore Polytechnic (SP) and Temasek
-                                Polytechnic (TP). Figures in Singapore Dollars.
-                            </small>
-                        </p>
+                        <div class="d-none d-sm-block">
+                            <div id="chart1" class="gviz chart"></div>
+                            <p>Notes</p>
+                            <ul>
+                                <li>Size of the bubble indicates the <strong>Employment Number</strong>, which is the number of respondents who were employed on a full-time permanent basis within 6 months after completing their final examinations.
+                                </li>
+                                <li>Colour of the bubble indicates the <strong>Course Category</strong> to which the diploma belongs to.
+                                </li>
+                            </ul>
+                        </div>
                         <div id="chart2"></div>
                     </div>
                 </div>
@@ -146,8 +150,9 @@
 </div>
 <!-- Below the fold -->
 <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="/js/spin.min.js"></script>
 <!-- Required for loading Google Visualization API -->
 <script src="https://www.google.com/jsapi"></script>
@@ -175,7 +180,7 @@
 
             });
 
-            $(window).load(function() {
+            $(window).on("load", (function() {
                 // Once the page is fully loaded, stop spinning
                 Rats.UI.LoadAnimation.stop(spinner);
             });
@@ -199,7 +204,7 @@
                     placement : "right",
                     html : false,
                     trigger : "hover",
-                    selector : ".google-visualization-controls-categoryfilter > .charts-inline-block"
+                    selector : ".charts-menu-button"
                 });
 
                 // Tooltip for year filter
@@ -209,7 +214,7 @@
                     placement : "right",
                     html : false,
                     trigger : "hover",
-                    selector : ".google-visualization-controls-categoryfilter > .charts-inline-block"
+                    selector : ".charts-menu-button"
                 });
 
                 // Tooltip for year filter
@@ -219,37 +224,7 @@
                     placement : "right",
                     html : false,
                     trigger : "hover",
-                    //
-                    selector : ".google-visualization-controls-categoryfilter > .charts-inline-block"
-                });
-
-                // Popover for infobar help
-
-                $("#infobar #help").popover({
-                    title : "Preliminary Data",
-                    placement : "bottom",
-                    html : true,
-                    trigger : "hover",
-                    content : "The charts are based on <strong>preliminary data</strong> from <em>Ministry of " + "Manpower Report on Wages</em>. This is as good as it gets, because the " + "actual data, breakdown by diploma, is not available from Ministry " + "of Manpower (MOM) or Ministry of Education (MOE). The actual data " + "is summarised in the <em>Polytechnic Graduate Employment Survey</em> (Polyges.sg) " + "but it does not offer the course-by-course detail that is provided by MOM."
-                });
-
-                // Popover for chart guide
-
-                $("#infobar #chartguide").popover({
-                    title : "Notes",
-                    placement : "bottom",
-                    html : true,
-                    trigger : "hover",
-                    content : "<ol> " + "<li>The <span class='badge'>size</span> of the bubble indicates the <strong>Employment Number</strong>, which is the number of respondents who were employed on a full-time permanent basis within 6 months after completing their final examinations.</li>" + "<li>The <span class='badge'>colour</span> of the bubble indicates the <strong>Course Category</strong> to which the diploma belongs to.</li>" + "<li>The <span class='badge'>position</span> of the bubble indicates the median starting pay and employment rate in relative to other diplomas.</li>" + "</ol>"
-                });
-
-                // Tooltip for chart data link
-
-                $("#infobar #chartdata").tooltip({
-                    "title" : "Grab the chart data!",
-                    "placement" : "bottom",
-                    "html" : false,
-                    "trigger" : "hover"
+                    selector : ".charts-menu-button"
                 });
 
                 // Tooltip for table chart

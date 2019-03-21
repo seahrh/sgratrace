@@ -143,6 +143,7 @@ and the dropdown list below it
 /* Uni Grad Starting Pay - Page Styles
 ********************************************************/
 
+.page-degree #dashboard,
 .page-degree #dashboard #control2,
 .page-degree #dashboard #control3,
 .page-degree #dashboard #control4,
@@ -155,15 +156,18 @@ and the dropdown list below it
 /* Diploma Grad Starting Pay - Page Styles
 ********************************************************/
 
+.page-diploma #dashboard,
 .page-diploma #dashboard #control2,
 .page-diploma #dashboard #control3,
-.page-diploma #dashboard #control4 {
-	margin: 1em 0 0 0;
+.page-diploma #dashboard #control4,
+.page-diploma #dashboard #chart1,
+.page-diploma #dashboard #chart2 {
+	margin: 20px 0 0 0;
 }
 
 .page-diploma #dashboard #chart1 {
 	/* make bubble chart taller */
-	height: 40em;
+	height: 500px;
 }
 
 /* Macro Citizen Income - Page Styles
@@ -207,7 +211,10 @@ and the dropdown list below it
 
 /* Occupation Wages by Age - Page Styles
 ********************************************************/
-.page-age #dashboard #control-clearall {
+.page-age #dashboard,
+.page-age #dashboard #control-clearall,
+.page-age #dashboard #chart1,
+.page-age #dashboard #chart2 {
     margin: 20px 0 0 0;
 }
 .page-age #dashboard #control2,
@@ -215,10 +222,6 @@ and the dropdown list below it
 .page-age #dashboard #control4,
 .page-age #dashboard #control5 {
 	margin: 20px 20px 0 0;
-}
-.page-age #dashboard #chart1,
-.page-age #dashboard #chart2 {
-    margin: 20px 0 0 0;
 }
 
 
