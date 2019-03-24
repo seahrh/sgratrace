@@ -188,25 +188,24 @@ and the dropdown list below it
 ********************************************************/
 
 .page-household #notes {
-	margin: 2em 0 0 0;
+	margin: 20px 0 0 0;
 }
 
 .page-household #chart1, 
 .page-household #chart2,
 .page-household #chart3,
 .page-household #chart4 {
-	margin: 1em 0 0 0;
+	margin: 20px 0 0 0;
 }
 
 
 
-.page-household #control1, .page-household #control2, .page-household #control3, .page-household #control4 {
-	margin: 1em 0 1em 0;
-}
-
-
+.page-household #control1,
+.page-household #control2,
+.page-household #control3,
+.page-household #control4,
 .page-household #control-decile {
-	margin: 1em 0 1em 0;	
+	margin: 20px 0 20px 0;
 }
 
 /* Occupation Wages by Age - Page Styles

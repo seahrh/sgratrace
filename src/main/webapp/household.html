@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <!-- BEGIN Facebook Open Graph tags -->
         <meta property="og:title" content="The Great Singapore Rat Race" />
@@ -22,7 +22,7 @@
         <link href="https://pay.sgcharts.com/household.html" rel="canonical">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.pink-green.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="styles/rats.css">
         <script src="/js/ga.js"></script>
     </head>
@@ -73,7 +73,7 @@
             <main class="mdl-layout__content relative">
                 <div class="page-content container-fluid">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
+                        <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2">
                             <div class="ad">
                                 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                                 <!-- sgratrace__household__default__top -->
@@ -85,85 +85,79 @@
                                 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
                             </div>
                         </div>
-                        <div class="col-xs-12">
-                            <div id="infobar" class="hidden-xs">
-                                <a id="glossary" href="#" class="btn btn-info" rel="popover"><i
-                                class="icon-info-sign icon-white"></i> Glossary</a>
-                                <a id="chartdata"
-                                href="https://docs.google.com/spreadsheet/ccc?key=0ArgBv2Jut0VxdDVaYzczVzBpbGdOZWxORFlORzdmN3c&usp=sharing#gid=2"
-                                class="btn btn-primary" target="_blank"><i
-                                class="icon-th-list icon-white"></i> Chart Data</a>
-
-                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
                             <div class="page-header">
                                 <h1>Resident Households <small>Income Trends</small></h1>
                             </div>
-                            <p class="muted">
-                                Compare income groups - for example, check out
-                                the gap between the "81st - 90th" and the "91st - 100th"
-                                percentile!
-                            </p>
-                            <div class="alert alert-danger">
+                            <div class="alert alert-danger" role="alert">
                                 <p>
                                     <strong>Since the 2013 edition of <em>Key Household Income Trends</em>, the Department of Statistics has omitted income figures that exclude employer CPF contributions. Hence, all data after 2012 includes employer CPF contributions.</strong>
                                 </p>
                             </div>
-                            <div id="dashboard">
-                                <div id="control1"></div>
-                                <div id="control2"></div>
-                                <div id="chart1" class="gviz chart"></div>
-                                <p class="muted">
-                                    <small>Source: <a
+                            <p>
+                                Compare income groups - for example, check out
+                                the gap between the "81st - 90th" and the "91st - 100th"
+                                percentile!
+                            </p>
+                            <ul>
+                                <li>A decile group is one tenth of all households arranged by their incomes from minimum to maximum. The first decile group is the first one tenth (the 10% of all household with lowest incomes). The last decile is the one tenth of the households with the highest incomes.
+                                </li>
+                                <li>Chart data <a href="https://docs.google.com/spreadsheet/ccc?key=0ArgBv2Jut0VxdDVaYzczVzBpbGdOZWxORFlORzdmN3c&usp=sharing#gid=2" target="_blank">[Google Sheet]</a>
+                                </li>
+                            </ul>
+                            <p class="text-muted">
+                                <small>Source: <a
                                         href="http://www.singstat.gov.sg/publications/publications-and-papers/population#household_income_and_expenditure"
                                         target="_blank">Department of Statistics, Key Household Income Trends 2011-2014.</a> Based on ranking of all resident employed households by their
-                                        monthly household income from work. Figures in Singapore Dollars. </small>
-                                </p>
+                                    monthly household income from work / per household member. Figures in Singapore Dollars. </small>
+                            </p>
+                            <div id="dashboard">
+                                <div class="card bg-light">
+                                    <div class="card-body">
+                                        <div id="control1"></div>
+                                        <div id="control2"></div>
+                                    </div>
+                                </div>
+                                <div id="chart1" class="gviz chart"></div>
                                 <div id="chart2" class="gviz chart"></div>
-                                <p class="muted">
-                                    <small>Source: <a
-                                        href="http://www.singstat.gov.sg/publications/publications-and-papers/population#household_income_and_expenditure"
-                                        target="_blank">Department of Statistics, Key Household Income Trends 2011-2014.</a> Based on ranking of all resident employed
-                                        households by their monthly household income from work per household member.
-                                        Figures in Singapore Dollars. </small>
-                                </p>
                             </div>
                             <hr />
                             <h2>Inflation</h2>
+                            <p>
+                                Compare how income groups fare against inflation, as represented
+                                by the red line. Zoom
+                                in to a particular decile or year using the controls below:
+                            </p>
+                            <p class="text-muted">
+                                <small>Source: <a
+                                        href="http://www.singstat.gov.sg/publications/publications-and-papers/population#household_income_and_expenditure"
+                                        target="_blank">Department of Statistics, Key Household Income Trends 2011-2014.</a> Based on ranking of all resident employed
+                                    households by their monthly household income from work / per household member. Figures in Singapore Dollars.</small>
+                            </p>
                             <div id="dashboard2">
-                                <p class="muted">
-                                    Compare how income groups fare against inflation, as represented
-                                    by the red line. Zoom
-                                    in to a particular decile or year using the controls below:
-                                </p>
-                                <select id="control-decile" class="inline-top">
-                                    <option value="0">All Deciles</option>
-                                    <option value="3">*1st - 10th Percentile</option>
-                                    <option value="4">11th - 20th Percentile</option>
-                                    <option value="5">21st - 30th Percentile</option>
-                                    <option value="6">31st - 40th Percentile</option>
-                                    <option value="7">41st - 50th Percentile</option>
-                                    <option value="8">51st - 60th Percentile</option>
-                                    <option value="9">61st - 70th Percentile</option>
-                                    <option value="10">71st - 80th Percentile</option>
-                                    <option value="11">81st - 90th Percentile</option>
-                                    <option value="12">91st - 100th Percentile</option>
-                                </select>
-                                <div id="control3"></div>
-                                <div id="control4"></div>
+                                <div class="card bg-light">
+                                    <div class="card-body">
+                                        <select id="control-decile" class="inline-top">
+                                            <option value="0">All Deciles</option>
+                                            <option value="3">*1st - 10th Percentile</option>
+                                            <option value="4">11th - 20th Percentile</option>
+                                            <option value="5">21st - 30th Percentile</option>
+                                            <option value="6">31st - 40th Percentile</option>
+                                            <option value="7">41st - 50th Percentile</option>
+                                            <option value="8">51st - 60th Percentile</option>
+                                            <option value="9">61st - 70th Percentile</option>
+                                            <option value="10">71st - 80th Percentile</option>
+                                            <option value="11">81st - 90th Percentile</option>
+                                            <option value="12">91st - 100th Percentile</option>
+                                        </select>
+                                        <div id="control3"></div>
+                                        <div id="control4"></div>
+                                    </div>
+                                </div>
                                 <div id="chart3" class="gviz chart"></div>
-                                <p class="muted">
-                                    <small>Source: <a
-                                        href="http://www.singstat.gov.sg/publications/publications-and-papers/population#household_income_and_expenditure"
-                                        target="_blank">Department of Statistics, Key Household Income Trends 2011-2014.</a> Based on ranking of all resident employed
-                                        households by their monthly household income from work. Figures in Singapore Dollars.</small>
-                                </p>
                                 <div id="chart4" class="gviz chart"></div>
-                                <p class="muted">
-                                    <small>Source: <a
-                                        href="http://www.singstat.gov.sg/publications/publications-and-papers/population#household_income_and_expenditure"
-                                        target="_blank">Department of Statistics, Key Household Income Trends 2011-2014.</a> Based on ranking of all resident employed
-                                        households by their monthly household income from work per household member. Figures in Singapore Dollars.</small>
-                                </p>
                             </div>
                             <section id="notes">
                                 <p>
@@ -212,8 +206,9 @@
             </main>
         </div>
         <script src="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="/js/spin.min.js"></script>
         <!-- Required for loading Google Visualization API -->
         <script src="https://www.google.com/jsapi"></script>
@@ -236,34 +231,12 @@
                 // Once the DOM is loaded, start spinning
                 spinner = Rats.UI.LoadAnimation.start();
 
-                pageUI();
-
             });
 
-            $(window).load(function() {
+            $(window).on("load", function() {
                 // Once the page is fully loaded, stop spinning
                 Rats.UI.LoadAnimation.stop(spinner);
             });
-
-            function pageUI() {
-
-                // Tooltip for chart data link
-
-                $("#infobar #chartdata").tooltip({
-                    title : "Get the chart data!",
-                    placement : "bottom",
-                    html : "false",
-                    trigger : "hover"
-                });
-
-                $("#infobar #glossary").popover({
-                    title : "Decile (Decile Group)",
-                    placement : "bottom",
-                    html : true,
-                    trigger : "hover",
-                    content : 'A decile group is one tenth of all households arranged by their incomes from minimum to maximum. The first decile group is the first one tenth (the 10% of all household with lowest incomes). The last decile is the one tenth of the households with the highest incomes.'
-                });
-            };
         </script>
     </body>
 </html>
