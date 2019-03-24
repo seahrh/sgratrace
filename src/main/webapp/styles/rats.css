@@ -226,14 +226,14 @@ and the dropdown list below it
 
 /* Occupation Wages by Industry - Page Styles
 ********************************************************/
-.page-industry #dashboard #control1 {
-	margin: 0 0 1em 0;
-}
-
+.page-industry #dashboard #control1,
+.page-industry #dashboard #control-clearall,
 .page-industry #dashboard #control2, 
 .page-industry #dashboard #control4,
-.page-industry #dashboard #control3 {
-	margin: 1em 0 0 0;
+.page-industry #dashboard #control3,
+.page-industry #dashboard #chart1,
+.page-industry #dashboard #chart2 {
+	margin: 20px 0 0 0;
 }
 
 /* About - Page Styles
