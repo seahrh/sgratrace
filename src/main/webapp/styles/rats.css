@@ -174,14 +174,14 @@ and the dropdown list below it
 ********************************************************/
 
 .page-citizen #notes {
-	margin: 2em 0 0 0;
+	margin: 20px 0 0 0;
 }
 
 .page-citizen #chart1, 
 .page-citizen #chart2 {
-	margin: 1em 0 0 0;
+	margin: 20px 0 0 0;
 	/* Make simple column charts shorter */
-	height: 25em;
+	height: 400px;
 }
 
 /* Macro Household Income - Page Styles
