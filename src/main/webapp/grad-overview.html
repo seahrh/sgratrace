@@ -173,8 +173,6 @@
                 // Once the DOM is loaded, start spinning
                 spinner = Rats.UI.LoadAnimation.start();
 
-                pageUI();
-
             });
 
             $(window).on("load", function() {
@@ -182,18 +180,6 @@
                 Rats.UI.LoadAnimation.stop(spinner);
             });
 
-            function pageUI() {
-
-                // Tooltip for chart data link
-
-                $("#infobar #chartdata").tooltip({
-                    title : "Grab the chart data!",
-                    placement : "bottom",
-                    html : false,
-                    trigger : "hover"
-                });
-
-            };
         </script>
     </body>
 </html>
