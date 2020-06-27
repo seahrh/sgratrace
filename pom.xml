@@ -8,7 +8,7 @@
     <properties>
         <app.id>sgratrace</app.id>
         <app.version>v8-0</app.version>
-        <appengine.version>1.9.79</appengine.version>
+        <appengine.version>1.9.80</appengine.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -16,9 +16,6 @@
         <maven.compiler.showDeprecation>true</maven.compiler.showDeprecation>
         <archiveClasses>true</archiveClasses>
     </properties>
-    <prerequisites>
-        <maven>3.6</maven>
-    </prerequisites>
     <dependencies>
         <!-- Compile/runtime dependencies -->
         <dependency>
@@ -140,7 +137,7 @@
             </plugin>
             <plugin>
                 <artifactId>maven-deploy-plugin</artifactId>
-                <version>3.1</version>
+                <version>3.0.0-M1</version>
             </plugin>
             <plugin>
                 <artifactId>maven-enforcer-plugin</artifactId>
@@ -154,7 +151,7 @@
                         <configuration>
                             <rules>
                                 <requireMavenVersion>
-                                    <version>3.5</version>
+                                    <version>3.6</version>
                                 </requireMavenVersion>
                                 <requirePluginVersions>
                                     <message>Best Practice is to always define plugin versions!</message>
