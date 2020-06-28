@@ -1376,7 +1376,7 @@ Rats.Viz.GraduateEmploymentSurvey.Qualification.dashboard = function(response) {
             },
             "chartArea" : {
                 "width" : "100%",
-                "height" : "80%",
+                "height" : "100%",
                 "top" : 45
             },
             "hAxis" : {
@@ -1386,10 +1386,10 @@ Rats.Viz.GraduateEmploymentSurvey.Qualification.dashboard = function(response) {
                     "fontSize" : 16
                 },
                 "gridlines" : {
-                    "count" : 3
+                    "count" : 11
                 },
                 // min and max gridlines to minimize cropping
-                //"minValue" : .25,
+                "minValue" : 0.10,
                 "maxValue" : 1.01
             },
             "vAxis" : {
@@ -1398,13 +1398,12 @@ Rats.Viz.GraduateEmploymentSurvey.Qualification.dashboard = function(response) {
                 "textStyle" : {
                     "fontSize" : 16
                 },
-                "gridlines" : {
-                    "count" : 3
-                },
                 // min 1600 to prevent low pay bubbles from cropping
                 // max 2600 to prevent post NS bubbles from cropping
-                //"minValue" : 2000,
-                "maxValue" : 6000
+                "gridlines" : {
+                    "count" : 11
+                },
+                "minValue" : 1000
             },
             "sizeAxis" : {
                 "minSize" : 10,
