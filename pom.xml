@@ -7,8 +7,8 @@
     <artifactId>sgratrace</artifactId>
     <properties>
         <app.id>sgratrace</app.id>
-        <app.version>v8-0</app.version>
-        <appengine.version>1.9.80</appengine.version>
+        <app.version>v8-1</app.version>
+        <appengine.version>1.9.88</appengine.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -57,13 +57,13 @@
         <dependency>
             <groupId>com.google.truth</groupId>
             <artifactId>truth</artifactId>
-            <version>1.0.1</version>
+            <version>1.1.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.13</version>
+            <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
