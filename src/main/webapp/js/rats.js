@@ -1251,7 +1251,7 @@ Rats.Viz.GraduateEmploymentSurvey.Qualification.dashboard = function(response) {
             }
         },
         'state' : {
-            'selectedValues' : ['2019']
+            'selectedValues' : ['2020']
         }
     });
 
